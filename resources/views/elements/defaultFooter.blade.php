@@ -99,7 +99,7 @@
     });
 </script>
 
-<script src="{{ asset('pmar/js/jquery-3.7.1.min.js') }}"></script>
+<script src="{{ asset('js/jquery-3.7.1.min.js') }}"></script>
 <!-- <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('fontawesome/js/all.min.js') }}"></script>
