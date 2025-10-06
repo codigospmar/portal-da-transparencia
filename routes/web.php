@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\{
+    PortalController,
+};
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ElementsController;
-
 /*
   |--------------------------------------------------------------------------
   | Web Routes
@@ -14,13 +15,13 @@ use App\Http\Controllers\ElementsController;
   |
  */
 
-
 Route::view("", 'index')->name("index");
 
 Route::group(['prefix' => 'transparencia', "as" => "pages."], function () {
 
     Route::view("renuncias-de-receitas", 'pages.renunciaDeReceita')->name("renunciaDeReceita");
     Route::view("qdd", 'pages.qdd')->name('qdd');
+//    Route::get("divida-ativa", [PortalController::class, "dividaAtiva"])->name('dividaAtiva');
     Route::view("renuncias-de-receitas", 'pages.renuncias-de-receitas')->name('renuncias-de-receitas');
     Route::view("beneficiarios-desoneracoes-tributarias", 'pages.beneficiarios-desoneracoes-tributarias')->name('beneficiarios-desoneracoes-tributarias');
     Route::view("incentivos-culturais", 'pages.incentivos-culturais')->name('incentivos-culturais');
@@ -38,10 +39,8 @@ Route::group(['prefix' => 'transparencia', "as" => "pages."], function () {
     Route::view("atas-das-audiencias-publicas", 'pages.atas')->name('atas');
     Route::view("notas-fiscais", 'pages.metas-fiscais')->name('metas-fiscais');
     Route::view("leis-orcamentarias", 'pages.leis-orcamentarias')->name('leis-orcamentarias');
-    Route::view("divida-ativa", 'pages.divida-ativa')->name('divida-ativa');
+    Route::get("divida-ativa", [PortalController::class, "dividaAtiva"])->name('divida-ativa');
     Route::view("estrutura-organizacional", 'pages.estrutura-organizacional')->name('estrutura-organizacional');
-
-    
 
     Route::view("relatorio-de-estoques-de-medicamentos", 'pages.estoques-de-medicamentos')->name('estoques-de-medicamentos');
     Route::view("unidades-de-saude", 'pages.unidades-de-saude')->name('unidades-de-saude');
@@ -53,11 +52,11 @@ Route::group(['prefix' => 'transparencia', "as" => "pages."], function () {
     Route::view("tabela-de-valores-de-diarias", 'pages.tabela-de-valores-de-diarias')->name('tabela-de-valores-de-diarias');
     Route::view("concursos", 'pages.concursos')->name('concursos');
     
-    Route::redirect('/ouvidoria', 'https://portal.angra.rj.gov.br/ouvidoria.asp?IndexSigla=sgri')->name("ouvidoria");
+    Route::view('/ouvidoria', 'pages.ouvidoria')->name("ouvidoria");
+    Route::view("ouvidoria/perguntas-frequentes", 'pages.ouvidoria-perguntas-frequentes')->name('ouvidoria-perguntas-frequentes');
+    Route::view("ouvidoria/sobre", 'pages.ouvidoria-sobre')->name('ouvidoria-sobre');
+    Route::redirect("ouvidoria/relatorios", 'https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp')->name('ouvidoria-relatorios');
+    Route::view("ouvidoria/informacoes-classificadas", 'pages.ouvidoria-informacoes-classificadas')->name('ouvidoria-informacoes-classificadas');
 });
 
-Route::redirect("ouvidoria/perguntas-frequentes", 'https://portal.angra.rj.gov.br/ouvidoria-perguntas-frequentes.asp?IndexSigla=sgri')->name('ouvidoria.perguntas-frequentes');
-Route::redirect("ouvidoria/sobre", 'https://portal.angra.rj.gov.br/ouvidoria-sobre.asp?IndexSigla=sgri')->name('ouvidoria.sobre');
-Route::redirect("ouvidoria/relatorios", 'ouvidoria-relatorios-manifestacoes')->name('ouvidoria.relatorios');
-Route::redirect("ouvidoria/informacoes-classificadas", 'https://portal.angra.rj.gov.br/ouvidoria-informacoes-classificadas.asp?IndexSigla=sgri')->name('ouvidoria.informacoes-classificadas');
 

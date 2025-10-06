@@ -27,13 +27,13 @@
                     <a href="https://falabr.cgu.gov.br/publico/RJ/AngradosReis/Manifestacao/RegistrarManifestacao" target="_blank" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
                         <i class="fas fa-comment-dots me-2"></i>Cadastro de Manifestação
                     </a>
-                    <a href="{{ route('ouvidoria.perguntas-frequentes') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
+                    <a href="{{ route('pages.ouvidoria-perguntas-frequentes') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
                         <i class="fas fa-question-circle me-2"></i>Perguntas Frequentes
                     </a>
-                    <a href="{{ route('ouvidoria.sobre') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
+                    <a href="{{ route('pages.ouvidoria-sobre') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
                         <i class="fas fa-info-circle me-2"></i>Sobre o Canal de Ouvidoria
                     </a>
-                    <a href="{{ route('ouvidoria.informacoes-classificadas') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
+                    <a href="{{ route('pages.ouvidoria-informacoes-classificadas') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
                         <i class="fas fa-lock me-2"></i>Informações Classificadas
                     </a>
                     <a href="https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
