@@ -7,8 +7,7 @@
         <!-- Breadcrumb -->
         <nav class="mb-4">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ env("PORTAL_ANGRA") }}">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Portal da Transparência</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
                 <li class="breadcrumb-item active">Audiências Públicas - Leis Orçamentárias</li>
             </ol>
         </nav>

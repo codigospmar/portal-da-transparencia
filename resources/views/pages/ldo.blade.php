@@ -6,8 +6,7 @@
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('paginas.home') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('paginas.portal-da-transparencia') }}">Portal da Transparência</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
                 <li class="breadcrumb-item active">LDO - Lei de Diretrizes Orçamentárias</li>
             </ol>
         </nav>
