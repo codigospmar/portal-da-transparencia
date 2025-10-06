@@ -1,0 +1,34 @@
+/* BARRA PADRÃƒO PMAR */
+
+.defaultBar {
+    height: 42px;
+    background-color: #db86a2;
+}
+
+.defaultBarLogo img {
+    height: 1.75rem;
+}
+
+.defaultBar-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    color: #ffffff;
+    padding-top: 8px;
+}
+
+.defaultBar-row .defaultBar-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.defaultBar-row a,
+.defaultBar-row a:active,
+.defaultBar-row a:visited,
+.defaultBar-row a:hover {
+    color: #ffffff !important;
+    font-weight: 700;
+}
