@@ -22,7 +22,6 @@ Route::group(["as" => "pages."], function () {
 
     Route::view("renuncias-de-receitas", 'pages.renunciaDeReceita')->name("renunciaDeReceita");
     Route::view("qdd", 'pages.qdd')->name('qdd');
-//    Route::get("divida-ativa", [PortalController::class, "dividaAtiva"])->name('dividaAtiva');
     Route::view("renuncias-de-receitas", 'pages.renuncias-de-receitas')->name('renuncias-de-receitas');
     Route::view("beneficiarios-desoneracoes-tributarias", 'pages.beneficiarios-desoneracoes-tributarias')->name('beneficiarios-desoneracoes-tributarias');
     Route::view("incentivos-culturais", 'pages.incentivos-culturais')->name('incentivos-culturais');

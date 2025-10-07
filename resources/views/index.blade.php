@@ -211,10 +211,10 @@
             <!-- Dívida Ativa -->
             @include('components._cardSingle', [
                 "id" => "dividaAtiva",
-                "link" => "https://portal.angra.rj.gov.br/transp-divida-ativa.asp?IndexSigla=transp",
-//                "link" => route("pages.divida-ativa"),
-                "target" => "_blank",
-//                "target" => "_self",
+//                "link" => "https://portal.angra.rj.gov.br/transp-divida-ativa.asp?IndexSigla=transp",
+                "link" => route("pages.divida-ativa"),
+//                "target" => "_blank",
+                "target" => "_self",
                 "fontawesome" => "<i class='fs-1 fas fa-file-invoice text-white fa-lg'></i>",
                 "title" => "Dívida Ativa",
             ])
@@ -481,7 +481,7 @@
             <!-- Radar da transparência -->
             @include('components._cardSingle', [
                 "id" => "radarDaTransparencia",
-                "link" => "https://radar.tce.mt.gov.br/extensions/radar-da-transparencia-publica/radar-da-transparencia-publica.html",
+                "link" => "https://radardatransparencia.atricon.org.br/",
                 "target" => "_blank",
                 "fontawesome" => "<i class='fa-solid fs-1 fa-magnifying-glass text-white fa-lg icon-hover'></i>",
                 "title" => "Radar da transparência",
