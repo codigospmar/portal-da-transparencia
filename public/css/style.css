@@ -4434,12 +4434,12 @@ a.btn-ouvidoria {
 
 .topo-nav-transparencia {
     background: var(--success);
-    background: linear-gradient(90deg, var(--success) 0%, rgb(186, 224, 215) 100%);
+    background: linear-gradient(90deg, var(--success) 0%, rgb(161, 202, 193) 100%);
 }
 
 footer.footer-pmar-transparencia {
     background: var(--success);
-    background: linear-gradient(90deg, var(--success) 0%, rgb(94, 141, 129) 100%);
+    background: linear-gradient(90deg, #6c8b87 0%, rgb(44, 66, 60) 100%);
     color: #ffffff;
     font-size: 1rem;
 }
