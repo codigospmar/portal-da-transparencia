@@ -355,7 +355,7 @@
                         "title" => "Oficinas e exposições",
                     ],
                     [
-                        "link" => "https://portal.angra.rj.gov.br/noticia.asp?IndexSigla=SCP&vid_noticia=54876",
+                        "link" => "https://angra.rj.gov.br/noticias/11-01-2019/lei-de-incentivo-e-edital-de-cultura-ja-estao-em-vigor",
                         "target" => "_blank",
                         "title" => "Lei de Incentivo à Cultura",
                     ],
@@ -506,12 +506,12 @@
                         "title" => "Remunerações",
                     ],
                     [
-                        "link" => "https://portaldoservidor.angra.rj.gov.br/tabela-salarial.asp?indexsigla=transp",
+                        "link" => "https://portaldoservidor.angra.rj.gov.br/tabela-salarial",
                         "target" => "_blank",
                         "title" => "Tabela Salarial",
                     ],
                     [
-                        "link" => "https://portaldoservidor.angra.rj.gov.br/tabela-salarial.asp?indexsigla=transp",
+                        "link" => "https://portaldoservidor.angra.rj.gov.br/tabela-salarial",
                         "target" => "_blank",
                         "title" => "Teto Salarial",
                     ],
