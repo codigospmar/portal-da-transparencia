@@ -12,29 +12,34 @@ use App\Models\Endereco;
 class PortalController extends Controller {
 
     public function dividaAtiva(Request $request) {
-        
+
         $paginate = 20;
 
         if ($request->filled('q')) {
             $request->validate([
                 'q' => 'nullable|string|max:255',
             ]);
-
+            
             $q = trim($request->q);
+            $valorReal = $this->__preparaValorReal($q);
+            $qLimpo = $this->clearCpfCnpj($q);
 
-            $registros = DividaAtivaRegistro::select('id')
-                    ->where(function ($query) use ($q) {
-                        $query->where('nome', 'like', "%{$q}%")
+            $registros = DividaAtivaRegistro::select("id")
+                    ->where(function ($query) use ($q, $valorReal, $qLimpo) {
+                        $query->where('numInscricao', 'like', "%{$q}%")
                         ->orWhere('numImovel', 'like', "%{$q}%")
-                        ->orWhere('cpf', 'like', "%" . $this->clearCpfCnpj($q) . "%")
-                        ->orWhere('cnpj', 'like', "%" . $this->clearCpfCnpj($q) . "%")
-                        ->orWhere('dividaValorTotal', 'like', "%" . $this->__preparaValorReal($q) . "%")
-                        ->orWhere('numInscricao', 'like', "%{$q}%");
+                        ->orWhere('cpf', 'like', "%{$qLimpo}%")
+                        ->orWhere('cnpj', 'like', "%{$qLimpo}%")
+                        ->orWhere('dividaValorTotal', 'like', "%{$valorReal}%")
+                        ->orWhere('nome', 'like', "%{$q}%");
                     })
                     ->pluck('id')
                     ->toArray();
 
-            $dividaAtiva = DividaAtiva::whereIn('divida_ativa_registro_id', $registros)
+
+            $dividaAtiva = DividaAtiva::where(function ($query) use ($registros) {
+                        $query->whereIn('divida_ativa_registro_id', $registros);
+                    })
                     ->orderByDesc('created_at')
                     ->paginate($paginate);
         } else {
@@ -46,9 +51,9 @@ class PortalController extends Controller {
             'dividas' => $dividaAtiva
         ]);
     }
-    
+
     public function unidadesSaude(Request $request) {
-        
+
         $paginate = 20;
         if (isset($request->q)) {
             $request->validate([

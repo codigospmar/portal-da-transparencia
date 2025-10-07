@@ -120,34 +120,59 @@ class DividaAtivaRegistro extends Model {
     }
 
     public function getCnpjAnonimizadoAttribute() {
-        $cnpj = $this->attributes['cnpj'] ?? null; 
+        $cnpj = $this->attributes['cnpj'] ?? null;
 
         if (!$cnpj || strlen($cnpj) !== 14) {
             return $cnpj;
         }
 
+        // Mantém os dois primeiros dígitos, mascara o meio e mantém o final "/0001-90"
         $iniciais = substr($cnpj, 0, 2);
         $mascara = str_repeat('*', 6);
-        $aposBarra = substr($cnpj, 8); 
-        
-        return $iniciais . '.' . $mascara . '/' . $aposBarra;
+        $parteMeio = substr($cnpj, 8, 4); // 0001
+        $ultimos = substr($cnpj, 12, 2);  // 90
+
+        return "{$iniciais}.{$mascara}/{$parteMeio}-{$ultimos}";
     }
 
     public function getNomeAnonimizadoAttribute() {
-        $nome = $this->attributes['nome'] ?? null;
+        $nome = trim($this->attributes['nome'] ?? '');
 
         if (!$nome) {
             return null;
         }
 
-        // Exemplo: "Maria da Silva" → "M**** ** S****"
-        $partes = explode(' ', $nome);
-        $anonimizadas = array_map(function ($parte) {
-            if (mb_strlen($parte) <= 2) {
-                return $parte; // mantém preposições curtas (de, da, do, etc.)
+        // Normaliza espaços múltiplos
+        $partes = preg_split('/\s+/', $nome);
+        $total = count($partes);
+
+        $anonimizadas = [];
+        foreach ($partes as $i => $parte) {
+            $parte = trim($parte);
+            $len = mb_strlen($parte);
+
+            // Mantém preposições curtas
+            if ($len <= 2) {
+                $anonimizadas[] = mb_strtolower($parte);
+                continue;
             }
-            return mb_substr($parte, 0, 1) . str_repeat('*', mb_strlen($parte) - 1);
-        }, $partes);
+
+            // Primeiro nome → mostra metade
+            if ($i === 0) {
+                $mostrar = ceil($len / 2);
+                $anonimizadas[] = mb_substr($parte, 0, $mostrar) . str_repeat('*', max(0, $len - $mostrar));
+                continue;
+            }
+
+            // Último nome → apenas inicial e ponto
+            if ($i === $total - 1) {
+                $anonimizadas[] = mb_substr($parte, 0, 1) . '.';
+                continue;
+            }
+
+            // Nomes do meio → apenas inicial e ponto
+            $anonimizadas[] = mb_substr($parte, 0, 1) . '.';
+        }
 
         return implode(' ', $anonimizadas);
     }

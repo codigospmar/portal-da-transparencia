@@ -63,9 +63,9 @@
                                             <td>{{ $divida->registro->numImovel ?? "Não informado" }}</td>
                                             <td class="text-start">
                                                 <div><strong>CPF ou CNPJ</strong></div>
-                                                <div class="mb-2">{{ $divida->registro->isPJ ? $divida->registro->cpf_anonimizado ?? "Não informado" : $divida->registro->cnpj_anonimizado ?? "Não informado" }}</div>
+                                                <div class="mb-2">{{ $divida->registro->isPJ ? $divida->registro->cnpj_anonimizado ?? "Não informado" : $divida->registro->cpf_anonimizado ?? "Não informado" }}</div>
                                                 <div><strong>Nome ou Razão Social</strong></div>
-                                                <div class="mb-2">{{ $divida->registro->nome }}</div>
+                                                <div class="mb-2">{{ $divida->registro->nome_anonimizado }}</div>
                                                 <div><strong>Origem da dívida</strong></div>
                                                 <div class="mb-2">{{ $divida->registro->origemDivida }}</div>
                                                 <div><strong>Exercício</strong></div>
