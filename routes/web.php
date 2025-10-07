@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view("", 'index')->name("index");
 
-Route::group(['prefix' => 'transparencia', "as" => "pages."], function () {
+Route::group(["as" => "pages."], function () {
 
     Route::view("renuncias-de-receitas", 'pages.renunciaDeReceita')->name("renunciaDeReceita");
     Route::view("qdd", 'pages.qdd')->name('qdd');
