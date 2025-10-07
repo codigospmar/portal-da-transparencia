@@ -2,7 +2,7 @@
     <nav>
         <div class="dropdown">
             <button id="{{ $id }}" class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-controls="{{ $dropdownId }}">
-                <span class="bg-success bg-opacity-10 p-3 rounded-3 me-3 d-inline-flex align-items-center justify-content-center" aria-hidden="true" style="color: white;">
+                <span class="bg-success bg-opacity-10 p-3 rounded-3 me-3 d-inline-flex align-items-center justify-content-center" aria-hidden="true" style="color: white; height: 73px; width: 73px;">
                     {!! $fontawesome !!}
                 </span>
 

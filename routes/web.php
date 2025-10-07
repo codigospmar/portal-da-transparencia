@@ -4,6 +4,7 @@ use App\Http\Controllers\{
     PortalController,
 };
 use Illuminate\Support\Facades\Route;
+
 /*
   |--------------------------------------------------------------------------
   | Web Routes
@@ -43,7 +44,7 @@ Route::group(["as" => "pages."], function () {
     Route::view("estrutura-organizacional", 'pages.estrutura-organizacional')->name('estrutura-organizacional');
 
     Route::view("relatorio-de-estoques-de-medicamentos", 'pages.estoques-de-medicamentos')->name('estoques-de-medicamentos');
-    Route::view("unidades-de-saude", 'pages.unidades-de-saude')->name('unidades-de-saude');
+    Route::get("unidades-de-saude", [PortalController::class, "unidadesSaude"])->name('unidades-de-saude');
     Route::view("oficinas-e-exposicoes-culturais", 'pages.oficinas-e-exposicoes-culturais')->name('oficinas-e-exposicoes-culturais');
     Route::view("pareceres-fundeb", 'pages.pareceres-fundeb')->name('pareceres-fundeb');
     Route::view("parecer-rag-saude", 'pages.parecer-rag-saude')->name('parecer-rag-saude');
@@ -51,12 +52,11 @@ Route::group(["as" => "pages."], function () {
     Route::view("lgpd", 'pages.lgpd')->name('lgpd');
     Route::view("tabela-de-valores-de-diarias", 'pages.tabela-de-valores-de-diarias')->name('tabela-de-valores-de-diarias');
     Route::view("concursos", 'pages.concursos')->name('concursos');
-    
+
     Route::view('/ouvidoria', 'pages.ouvidoria')->name("ouvidoria");
     Route::view("ouvidoria/perguntas-frequentes", 'pages.ouvidoria-perguntas-frequentes')->name('ouvidoria-perguntas-frequentes');
     Route::view("ouvidoria/sobre", 'pages.ouvidoria-sobre')->name('ouvidoria-sobre');
     Route::redirect("ouvidoria/relatorios", 'https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp')->name('ouvidoria-relatorios');
     Route::view("ouvidoria/informacoes-classificadas", 'pages.ouvidoria-informacoes-classificadas')->name('ouvidoria-informacoes-classificadas');
 });
-
 

@@ -12,6 +12,8 @@
 
             @include('components._sectionTitle', ["text" => "Informações Orçamentárias e Financeiras"])
 
+            <div class="my-3"></div>
+            
             <!-- Receitas -->
             @include('components._cardDropDown', [
                 "id" => "receitas",
@@ -152,402 +154,411 @@
             ])
 
             <!-- Prestação de Contas -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fs-1 fas fa-clipboard-check text-white fa-lg"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Prestação de Contas</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="{{ route('pages.parecer-previo-tcerj') }}">Parecer Prévio TCE-RJ</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.julgamento-contas') }}">Julgamento das contas do Executivo pelo Legislativo</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "prestacaoDeContas",
+                "dropdownId" => "prestacaoDeContasId",
+                "fontawesome" => "<i class='fs-1 fas fa-clipboard-check text-white fa-lg'></i>",
+                "title" => "Prestação de Contas",
+                "dropdown" => [
+                    [
+                        "link" => route('pages.parecer-previo-tcerj'),
+                        "target" => "_self",
+                        "title" => "Parecer Prévio TCE-RJ",
+                    ],
+                    [
+                        "link" => route('pages.julgamento-contas'),
+                        "target" => "_self",
+                        "title" => "Julgamento das contas do Executivo pelo Legislativo",
+                    ],
+                ],
+            ])
 
             <!-- Audiências Públicas -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fs-1 fas fa-users text-white fa-lg"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Audiências Públicas</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="{{ route('pages.atas') }}">Atas</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.metas-fiscais') }}">Metas Fiscals</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.leis-orcamentarias') }}">Leis orçamentárias</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "audienciasPublicas",
+                "dropdownId" => "audienciasPublicasId",
+                "fontawesome" => "<i class='fs-1 fas fa-users text-white fa-lg'></i>",
+                "title" => "Audiências Públicas",
+                "dropdown" => [
+                    [
+                        "link" => route('pages.atas'),
+                        "target" => "_self",
+                        "title" => "Atas",
+                    ],
+                    [
+                        "link" => route('pages.metas-fiscais'),
+                        "target" => "_self",
+                        "title" => "Metas Fiscals",
+                    ],
+                    [
+                        "link" => route('pages.leis-orcamentarias'),
+                        "target" => "_self",
+                        "title" => "Leis orçamentárias",
+                    ],
+                ],
+            ])
 
             <!-- Prefeitura Eletrônica -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3" href="https://www.spe.angra.rj.gov.br/Capa.aspx" target="_blank">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fs-1 fas fa-laptop-house text-white fa-lg"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Prefeitura Eletrônica</strong>
-                        <small class="d-block text-muted">Iptu, NFS-e, Iss e outros</small>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "prefeituraEletronica",
+                "link" => "https://www.spe.angra.rj.gov.br/Capa.aspx",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fs-1 fas fa-laptop-house text-white fa-lg'></i>",
+                "title" => "Prefeitura Eletrônica",
+                "small" => "Iptu, NFS-e, Iss e outros",
+            ])
 
             <!-- Dívida Ativa -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3" href="{{ route("pages.divida-ativa") }}">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fs-1 fas fa-file-invoice text-white fa-lg"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Dívida Ativa</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "dividaAtiva",
+                "link" => route("pages.divida-ativa"),
+                "target" => "_self",
+                "fontawesome" => "<i class='fs-1 fas fa-file-invoice text-white fa-lg'></i>",
+                "title" => "Dívida Ativa",
+            ])
 
             <!-- Andamento de Obras -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3" href="https://obras.angra.rj.gov.br/">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fs-1 fas fa-hard-hat text-white fa-lg"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Andamento de Obras</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "andamentoDeObras",
+                "link" => "https://obras.angra.rj.gov.br/",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fs-1 fas fa-hard-hat text-white fa-lg'></i>",
+                "title" => "Andamento de Obras",
+            ])
 
-            <div class="col-12 sectionTitle pt-5">
-                <h1 class="text-soft">Informações Institucionais</h1>
-            </div>
+            <div class="my-3"></div>
+            
+            @include('components._sectionTitle', ["text" => "Informações Institucionais"])
+            
+            <div class="my-3"></div>
 
             <!-- Estrutura Organizacional -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-sitemap text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Estrutura Organizacional</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="{{ route('pages.estrutura-organizacional') }}">Informações das Secretarias</a></li>
-                        <li><a class="dropdown-item" href="https://www.canva.com/design/DAFnNE4WjuY/tCXJal3yhq8ZwVj-qggO6w/view?website#2:prefeito" target="_blank">Organograma</a></li>
-                        <li><a class="dropdown-item" href="https://portal.angra.rj.gov.br/downloads/Nova_Lista_Telefonica.pdf" target="_blank">Lista Telefônica</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "estruturaOrganizacional",
+                "dropdownId" => "estruturaOrganizacionalId",
+                "fontawesome" => "<i class='fas fs-1 fa-sitemap text-white fa-lg icon-hover'></i>",
+                "title" => "Estrutura Organizacional",
+                "dropdown" => [
+                    [
+                        "link" => route('pages.estrutura-organizacional'),
+                        "target" => "_self",
+                        "title" => "Informações das Secretarias",
+                    ],
+                    [
+                        "link" => "https://www.canva.com/design/DAFnNE4WjuY/tCXJal3yhq8ZwVj-qggO6w/view?website#2:prefeito",
+                        "target" => "_blank",
+                        "title" => "Organograma",
+                    ],
+                    [
+                        "link" => "https://portal.angra.rj.gov.br/downloads/Nova_Lista_Telefonica.pdf",
+                        "target" => "_blank",
+                        "title" => "Lista Telefônica",
+                    ],
+                ],
+            ])
 
             <!-- Ouvidoria -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="{{ route('pages.ouvidoria') }}">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-headset text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Ouvidoria</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "ouvidoria",
+                "link" => route('pages.ouvidoria'),
+                "target" => "_self",
+                "fontawesome" => "<i class='fas fs-1 fa-headset text-white fa-lg icon-hover'></i>",
+                "title" => "Ouvidoria",
+            ])
 
             <!-- e-SIC -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="{{ route('pages.ouvidoria') }}">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-envelope-open-text text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>e-SIC</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "eSIC",
+                "link" => "https://falabr.cgu.gov.br/web/home?modoOuvidoria=1&ouvidoriaInterna=false",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-envelope-open-text text-white fa-lg icon-hover'></i>",
+                "title" => "e-SIC",
+            ])
 
             <!-- Saúde -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-heartbeat text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Saúde</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://angra.rj.gov.br/servicos/plano-municipal-de-saude-2022-2025" target="_blank">Plano Municipal de Saúde 2022 - 2025</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.estoques-de-medicamentos') }}">Relatórios de Estoque de Medicamentos</a></li>
-                        <li><a class="dropdown-item" href="https://angra.rj.gov.br/servicos/instrumentos-de-planejamento-rag-pas-e-rdqa" target="_blank">Relatórios de Gestão</a></li>
-                        <li><a class="dropdown-item" href="https://portal.angra.rj.gov.br/downloads/SSA/REMUME-ATUALIZADA-2025.pdf" target="_blank">Relação de Medicamentos Essenciais</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.unidades-de-saude') }}" target="_blank">Unidades de Saúde</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "saude",
+                "dropdownId" => "saudeId",
+                "fontawesome" => "<i class='fas fs-1 fa-heartbeat text-white fa-lg icon-hover'></i>",
+                "title" => "Saúde",
+                "dropdown" => [
+                    [
+                        "link" => "https://angra.rj.gov.br/servicos/plano-municipal-de-saude-2022-2025",
+                        "target" => "_blank",
+                        "title" => "Plano Municipal de Saúde 2022 - 2025",
+                    ],
+                    [
+                        "link" => route('pages.estoques-de-medicamentos'),
+                        "target" => "_self",
+                        "title" => "Relatórios de Estoque de Medicamentos",
+                    ],
+                    [
+                        "link" => "https://angra.rj.gov.br/servicos/instrumentos-de-planejamento-rag-pas-e-rdqa",
+                        "target" => "_blank",
+                        "title" => "Relatórios de Gestão",
+                    ],
+                    [
+                        "link" => "https://portal.angra.rj.gov.br/downloads/SSA/REMUME-ATUALIZADA-2025.pdf",
+                        "target" => "_blank",
+                        "title" => "Relação de Medicamentos Essenciais",
+                    ],
+                    [
+                        "link" => route('pages.unidades-de-saude'),
+                        "target" => "_self",
+                        "title" => "Unidades de Saúde",
+                    ],
+                ],
+            ])
 
             <!-- Educação -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-graduation-cap text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Educação</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://angra.rj.gov.br/servicos/plano-municipal-de-educacao-pme-consulta-publica">Plano Municipal de Educação 2015 - 2025</a></li>
-                        <li><a class="dropdown-item" href="https://matriculadigital.angra.rj.gov.br/#/" target="_blank">Matrícula Digital</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "educacao",
+                "dropdownId" => "educacaoId",
+                "fontawesome" => "<i class='fas fs-1 fa-graduation-cap text-white fa-lg icon-hover'></i>",
+                "title" => "Educação",
+                "dropdown" => [
+                    [
+                        "link" => "https://angra.rj.gov.br/servicos/plano-municipal-de-educacao-pme-consulta-publica",
+                        "target" => "_blank",
+                        "title" => "Plano Municipal de Educação 2015 - 2025",
+                    ],
+                    [
+                        "link" => "https://matriculadigital.angra.rj.gov.br/#/",
+                        "target" => "_blank",
+                        "title" => "Matrícula Digital",
+                    ],
+                ],
+            ])
 
-            <!-- Esporte -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-running text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Esporte</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://angra.rj.gov.br/servicos/projetos-aprovados-pela-comissao-de-incentivo-ao-esporte">Projetos aprovados</a></li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Esporte -->            
+            @include('components._cardSingle', [
+                "id" => "esporte",
+                "link" => "https://angra.rj.gov.br/servicos/projetos-aprovados-pela-comissao-de-incentivo-ao-esporte",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-running text-white fa-lg icon-hover'></i>",
+                "title" => "Esporte",
+                "small" => "Projetos aprovados",
+            ])
 
             <!-- Cultura -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-paint-brush text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Cultura</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="{{ route('pages.oficinas-e-exposicoes-culturais') }}">Oficinas e exposições</a></li>
-                        <li><a class="dropdown-item" href="https://portal.angra.rj.gov.br/noticia.asp?IndexSigla=SCP&vid_noticia=54876" target="_blank">Lei de Incentivo à Cultura</a></li>
-                        <li><a class="dropdown-item" href="https://angra.rj.gov.br/servicos/fundo-municipal-de-cultura-2023" target="_blank">Fundo Municipal de Cultura</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "cultura",
+                "dropdownId" => "culturaId",
+                "fontawesome" => "<i class='fas fs-1 fa-paint-brush text-white fa-lg icon-hover'></i>",
+                "title" => "Cultura",
+                "dropdown" => [
+                    [
+                        "link" => route('pages.oficinas-e-exposicoes-culturais'),
+                        "target" => "_self",
+                        "title" => "Oficinas e exposições",
+                    ],
+                    [
+                        "link" => "https://portal.angra.rj.gov.br/noticia.asp?IndexSigla=SCP&vid_noticia=54876",
+                        "target" => "_blank",
+                        "title" => "Lei de Incentivo à Cultura",
+                    ],
+                    [
+                        "link" => "https://angra.rj.gov.br/servicos/fundo-municipal-de-cultura-2023",
+                        "target" => "_blank",
+                        "title" => "Fundo Municipal de Cultura",
+                    ],
+                ],
+            ])
 
             <!-- Conselhos Municipais -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-users-cog text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Conselhos Municipais</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://portal.angra.rj.gov.br/transp-conselhos.asp?IndexSigla=transp">Conselhos</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.pareceres-fundeb') }}">Parecer FUNDEB</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.parecer-rag-saude') }}">Parecer RAG Saúde</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "conselhosMunicipais",
+                "dropdownId" => "conselhosMunicipaisId",
+                "fontawesome" => "<i class='fas fs-1 fa-users-cog text-white fa-lg icon-hover'></i>",
+                "title" => "Conselhos Municipais",
+                "dropdown" => [
+                    [
+                        "link" => "https://portal.angra.rj.gov.br/transp-conselhos.asp?IndexSigla=transp",
+                        "target" => "_blank",
+                        "title" => "Conselhos",
+                    ],
+                    [
+                        "link" => route('pages.pareceres-fundeb'),
+                        "target" => "_self",
+                        "title" => "Parecer FUNDEB",
+                    ],
+                    [
+                        "link" => route('pages.parecer-rag-saude'),
+                        "target" => "_self",
+                        "title" => "Parecer RAG Saúde",
+                    ],
+                ],
+            ])
 
             <!-- Metas e Projetos -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-acompanhamento-ppa" target="_blank">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-chart-line text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Metas e Projetos</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "metasProjetos",
+                "link" => "https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-acompanhamento-ppa",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-chart-line text-white fa-lg icon-hover'></i>",
+                "title" => "Metas e Projetos",
+            ])
 
             <!-- Perguntas Frequentes -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="{{ route('pages.ouvidoria-perguntas-frequentes') }}">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-question-circle text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Perguntas Frequentes</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "perguntasFrequentes",
+                "link" => route('pages.ouvidoria-perguntas-frequentes'),
+                "target" => "_self",
+                "fontawesome" => "<i class='fas fs-1 fa-question-circle text-white fa-lg icon-hover'></i>",
+                "title" => "Perguntas Frequentes",
+            ])
+            
+            <div class="my-3"></div>
+            
+            @include('components._sectionTitle', ["text" => "Informações Administrativas"])
 
-            <div class="col-12 sectionTitle pt-5">
-                <h1 class="text-soft">Informações Administrativas</h1>
-            </div>
+            <div class="my-3"></div>
 
             <!-- Licitações -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-gavel text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Licitações</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://portal.angra.rj.gov.br/licitacoes-procedimentos.asp?indexsigla=transp&instituicao=0&status=0&modalidade=0&ano=2025" target="_blank">Licitações e Procedimentos</a></li>
-                        <li><a class="dropdown-item" href="https://portal.angra.rj.gov.br/licitacoes_atas.asp?IndexSigla=seges" target="_blank">Atas de Registro de Preço</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.plano-de-contratacao-anual') }}">Plano de Contratação Anual</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "licitacoes",
+                "dropdownId" => "licitacoesId",
+                "fontawesome" => "<i class='fas fs-1 fa-gavel text-white fa-lg icon-hover'></i>",
+                "title" => "Licitações",
+                "dropdown" => [
+                    [
+                        "link" => "https://portal.angra.rj.gov.br/licitacoes-procedimentos.asp?indexsigla=transp&instituicao=0&status=0&modalidade=0&ano=2025",
+                        "target" => "_blank",
+                        "title" => "Licitações e Procedimentos",
+                    ],
+                    [
+                        "link" => "https://portal.angra.rj.gov.br/licitacoes_atas.asp?IndexSigla=seges",
+                        "target" => "_blank",
+                        "title" => "Atas de Registro de Preço",
+                    ],
+                    [
+                        "link" => route('pages.plano-de-contratacao-anual'),
+                        "target" => "_self",
+                        "title" => "Plano de Contratação Anual",
+                    ],
+                ],
+            ])
 
             <!-- Contratos -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="https://portal.angra.rj.gov.br/contratos.asp?indexsigla=seges&QN=&QS=0&QF=&QO=&QC=&QA=2023&QT=0&QV=" target="_blank">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-file-contract text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Contratos</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "contratos",
+                "link" => "https://portal.angra.rj.gov.br/contratos.asp?indexsigla=seges&QN=&QS=0&QF=&QO=&QC=&QA=2023&QT=0&QV=",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-file-contract text-white fa-lg icon-hover'></i>",
+                "title" => "Contratos",
+            ])
 
             <!-- Legislação Municipal -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="https://portal.angra.rj.gov.br/legislacao.asp?indexsigla=sgri" target="_blank">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-balance-scale text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Legislação Municipal</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "legislacaoMunicipal",
+                "link" => "https://portal.angra.rj.gov.br/legislacao.asp?indexsigla=sgri",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-balance-scale text-white fa-lg icon-hover'></i>",
+                "title" => "Legislação Municipal",
+            ])
 
             <!-- LGPD -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-shield-alt text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>LGPD</strong><br>
-                            <small>Lei Geral de Proteção de Dados</small>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="{{ route('pages.lgpd') }}">LGPD - Lei Geral de Proteção de Dados</a></li>
-                        <li><a class="dropdown-item" href="https://angra.rj.gov.br/servicos/dados-abertos">Dados abertos</a></li>
-                    </ul>
-                </div>
-            </div>
-
+            @include('components._cardSingle', [
+                "id" => "lgpd",
+                "link" => route('pages.lgpd'),
+                "target" => "_self",
+                "fontawesome" => "<i class='fas fs-1 fa-shield-alt text-white fa-lg icon-hover'></i>",
+                "title" => "LGPD",
+                "small" => "Lei Geral de Proteção de Dados",
+            ])
+            
             <!-- Governo Digital -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="https://angra.rj.gov.br/servicos/governo-digital">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-laptop text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Governo Digital</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "governoDigital",
+                "link" => "https://angra.rj.gov.br/servicos/governo-digital",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-laptop text-white fa-lg icon-hover'></i>",
+                "title" => "Governo Digital",
+            ])
 
             <!-- Radar da transparência -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="https://radar.tce.mt.gov.br/extensions/radar-da-transparencia-publica/radar-da-transparencia-publica.html" target="_blank">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fa-solid fs-1 fa-magnifying-glass text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Radar da transparência</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "radarDaTransparencia",
+                "link" => "https://radar.tce.mt.gov.br/extensions/radar-da-transparencia-publica/radar-da-transparencia-publica.html",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fa-solid fs-1 fa-magnifying-glass text-white fa-lg icon-hover'></i>",
+                "title" => "Radar da transparência",
+            ])
+            
+            <div class="my-3"></div>
+            
+            @include('components._sectionTitle', ["text" => "Informações de Recursos Humanos"])
 
-            <div class="col-12 sectionTitle pt-5">
-                <h1 class="text-soft">Informações de Recursos Humanos</h1>
-            </div>
+            <div class="my-3"></div>
 
             <!-- Remuneração de Servidores -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-money-check-alt text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Remuneração de Servidores</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-folha-pagamento/" target="_blank">Remunerações</a></li>
-                        <li><a class="dropdown-item" href="https://portaldoservidor.angra.rj.gov.br/tabela-salarial.asp?indexsigla=transp" target="_blank">Tabela Salarial</a></li>
-                        <li><a class="dropdown-item" href="https://portaldoservidor.angra.rj.gov.br/tabela-salarial.asp?indexsigla=transp" target="_blank">Teto Salarial</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "remuneracaoDeServidores",
+                "dropdownId" => "remuneracaoDeServidoresId",
+                "fontawesome" => "<i class='fas fs-1 fa-money-check-alt text-white fa-lg icon-hover'></i>",
+                "title" => "Remuneração de Servidores",
+                "dropdown" => [
+                    [
+                        "link" => "https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-folha-pagamento/",
+                        "target" => "_blank",
+                        "title" => "Remunerações",
+                    ],
+                    [
+                        "link" => "https://portaldoservidor.angra.rj.gov.br/tabela-salarial.asp?indexsigla=transp",
+                        "target" => "_blank",
+                        "title" => "Tabela Salarial",
+                    ],
+                    [
+                        "link" => "https://portaldoservidor.angra.rj.gov.br/tabela-salarial.asp?indexsigla=transp",
+                        "target" => "_blank",
+                        "title" => "Teto Salarial",
+                    ],
+                ],
+            ])
 
             <!-- Diárias e Passagens -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <div class="dropdown">
-                    <button class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 dropdown-toggle btn-hover-item" type="button" data-bs-toggle="dropdown">
-                        <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                            <i class="fas fs-1 fa-plane text-white fa-lg icon-hover"></i>
-                        </div>
-                        <span class="text-start">
-                            <strong>Diárias e Passagens</strong>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu text-wrap shadow-sm">
-                        <li><a class="dropdown-item" href="https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-diaria-passagem/" target="_blank">Despesas com diárias e passagens</a></li>
-                        <li><a class="dropdown-item" href="{{ route('pages.tabela-de-valores-de-diarias') }}" target="_blank">Tabela de valores das diárias</a></li>
-                    </ul>
-                </div>
-            </div>
+            @include('components._cardDropDown', [
+                "id" => "diariasEPassagens",
+                "dropdownId" => "diariasEPassagensId",
+                "fontawesome" => "<i class='fas fs-1 fa-plane text-white fa-lg icon-hover'></i>",
+                "title" => "Diárias e Passagens",
+                "dropdown" => [
+                    [
+                        "link" => "https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-diaria-passagem/",
+                        "target" => "_blank",
+                        "title" => "Despesas com diárias e passagens",
+                    ],
+                    [
+                        "link" => route('pages.tabela-de-valores-de-diarias'),
+                        "target" => "_blank",
+                        "title" => "Tabela de valores das diárias",
+                    ],
+                ],
+            ])
 
             <!-- Concursos Públicos -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="{{ route('pages.concursos') }}">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-graduation-cap text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Concursos Públicos</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "concursosPublicos",
+                "link" => route('pages.concursos'),
+                "target" => "_self",
+                "fontawesome" => "<i class='fas fs-1 fa-graduation-cap text-white fa-lg icon-hover'></i>",
+                "title" => "Concursos Públicos",
+            ])
+            
+            <div class="my-3"></div>
+            
+            @include('components._sectionTitle', ["text" => "Portal de Dados Abertos"])
 
-            <div class="col-12 sectionTitle pt-5">
-                <h1 class="text-soft">Portal de Dados Abertos</h1>
-            </div>
-
+            <div class="my-3"></div>
+            
             <!-- Dados Abertos -->
-            <div class="col-xl-3 col-lg-4 col-md-6 card-item">
-                <a class="btn btn-outline-success border-0 shadow rounded-4 w-100 text-wrap d-flex align-items-center justify-content-start p-3 btn-hover-item" href="https://angra.rj.gov.br/servicos/dados-abertos">
-                    <div class="bg-success bg-opacity-10 p-3 rounded-3 me-3">
-                        <i class="fas fs-1 fa-database text-white fa-lg icon-hover"></i>
-                    </div>
-                    <span class="text-start">
-                        <strong>Dados Abertos</strong>
-                    </span>
-                </a>
-            </div>
+            @include('components._cardSingle', [
+                "id" => "dadosAbertos",
+                "link" => "https://angra.rj.gov.br/servicos/dados-abertos",
+                "target" => "_blank",
+                "fontawesome" => "<i class='fas fs-1 fa-database text-white fa-lg icon-hover'></i>",
+                "title" => "Dados Abertos",
+            ])
 
         </div>
     </div>

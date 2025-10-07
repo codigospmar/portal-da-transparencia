@@ -30,48 +30,6 @@
                     "placeholder" => "Pesquisar por número do imóvel, número do iss, cpf ou cnpj, contribuinte, exercício..."
                 ])
                 
-<!--                <form action="" method="GET" id="filtro-form" class="border-0 shadow-sm rounded p-3 bg-light">
-                    <div class="row g-3 p-3">
-                        <div class="col-md-2">
-                            <label for="numeroImovel" class="form-label">Número do Imóvel</label>
-                            <input type="text" name="numeroImovel" id="numeroImovel" class="form-control" placeholder="Ex: 12345">
-                        </div>
-
-                        <div class="col-md-2">
-                            <label for="codigoISS" class="form-label">Número do ISS</label>
-                            <input type="text" name="codigoISS" id="codigoISS" class="form-control" placeholder="Ex: 98765">
-                        </div>
-
-                        <div class="col-md-2">
-                            <label for="cpfCnpj" class="form-label">CPF ou CNPJ</label>
-                            <input type="text" name="cpfCnpj" id="cpfCnpj" class="form-control" placeholder="Digite CPF ou CNPJ">
-                        </div>
-
-                        <div class="col-md-2">
-                            <label for="nomePessoa" class="form-label">Contribuinte</label>
-                            <input type="text" name="nomePessoa" id="nomePessoa" class="form-control" placeholder="Nome do contribuinte">
-                        </div>
-
-                        <div class="col-md-2">
-                            <label for="exercicio" class="form-label">Exercício</label>
-                            <select name="exercicio" id="exercicio" class="form-select">
-                                <option value="">Selecione</option>
-                            @for($ano = date('Y'); $ano >= 1983; $ano--)
-                                    <option value="{{ $ano }}">{{ $ano }}</option>
-                                @endfor
-                            </select>
-                        </div>
-
-                        <div class="col-12 d-flex justify-content-end gap-2">
-                            <button type="reset" class="btn btn-outline-secondary">
-                                <i class="fas fa-eraser me-1"></i> Limpar
-                            </button>
-                            <button type="submit" class="btn btn-green">
-                                <i class="fas fa-search me-1"></i> Pesquisar
-                            </button>
-                        </div>
-                    </div>
-                </form>-->
             </section>
 
         <!-- Download -->
@@ -105,7 +63,7 @@
                                             <td>{{ $divida->registro->numImovel ?? "Não informado" }}</td>
                                             <td class="text-start">
                                                 <div><strong>CPF ou CNPJ</strong></div>
-                                                <div class="mb-2">{{ $divida->registro->isPJ ? $divida->registro->cpf ?? "Não informado" : $divida->registro->cnpj ?? "Não informado" }}</div>
+                                                <div class="mb-2">{{ $divida->registro->isPJ ? $divida->registro->cpf_anonimizado ?? "Não informado" : $divida->registro->cnpj_anonimizado ?? "Não informado" }}</div>
                                                 <div><strong>Nome ou Razão Social</strong></div>
                                                 <div class="mb-2">{{ $divida->registro->nome }}</div>
                                                 <div><strong>Origem da dívida</strong></div>

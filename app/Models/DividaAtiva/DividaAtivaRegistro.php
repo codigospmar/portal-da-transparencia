@@ -23,6 +23,11 @@ class DividaAtivaRegistro extends Model {
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
+    protected $appends = [
+        'cpf_anonimizado',
+        'cnpj_anonimizado',
+        'nome_anonimizado',
+    ];
     protected $fillable = [
         'id',
         'created_at',
@@ -98,5 +103,52 @@ class DividaAtivaRegistro extends Model {
 
     public function setCnpjAttribute($value) {
         $this->attributes['cnpj'] = $value ? preg_replace('/\D/', '', $value) : null;
+    }
+
+    public function getCpfAnonimizadoAttribute() {
+        $cpf = $this->attributes['cpf'] ?? null;
+
+        if (!$cpf || strlen($cpf) !== 11) {
+            return $cpf;
+        }
+
+        $iniciais = substr($cpf, 0, 3);
+        $meioMascarado = str_repeat('*', 5);
+        $ultimos = substr($cpf, 9, 2);
+
+        return $iniciais . '.' . $meioMascarado . '-' . $ultimos;
+    }
+
+    public function getCnpjAnonimizadoAttribute() {
+        $cnpj = $this->attributes['cnpj'] ?? null; 
+
+        if (!$cnpj || strlen($cnpj) !== 14) {
+            return $cnpj;
+        }
+
+        $iniciais = substr($cnpj, 0, 2);
+        $mascara = str_repeat('*', 6);
+        $aposBarra = substr($cnpj, 8); 
+        
+        return $iniciais . '.' . $mascara . '/' . $aposBarra;
+    }
+
+    public function getNomeAnonimizadoAttribute() {
+        $nome = $this->attributes['nome'] ?? null;
+
+        if (!$nome) {
+            return null;
+        }
+
+        // Exemplo: "Maria da Silva" → "M**** ** S****"
+        $partes = explode(' ', $nome);
+        $anonimizadas = array_map(function ($parte) {
+            if (mb_strlen($parte) <= 2) {
+                return $parte; // mantém preposições curtas (de, da, do, etc.)
+            }
+            return mb_substr($parte, 0, 1) . str_repeat('*', mb_strlen($parte) - 1);
+        }, $partes);
+
+        return implode(' ', $anonimizadas);
     }
 }

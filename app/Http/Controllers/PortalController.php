@@ -6,6 +6,8 @@ use App\Models\DividaAtiva\DividaAtivaRegistro;
 use App\Models\DividaAtiva\DividaAtiva;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Unidade;
+use App\Models\Endereco;
 
 class PortalController extends Controller {
 
@@ -42,6 +44,46 @@ class PortalController extends Controller {
 
         return view('pages.divida-ativa', [
             'dividas' => $dividaAtiva
+        ]);
+    }
+    
+    public function unidadesSaude(Request $request) {
+        
+        $paginate = 20;
+        if (isset($request->q)) {
+            $request->validate([
+                'q' => 'nullable|string|max:255',
+            ]);
+            $unidadesSaude = Unidade::select('unidades_saude.*')
+                    ->join('enderecos', 'enderecos.owner_id', '=', 'unidades_saude.id')
+                    ->where(function ($query) use ($request) {
+                        $q = trim($request->q);
+                        $query->where('unidades_saude.nome', 'like', "%{$q}%")
+                        ->orWhere('unidades_saude.telefone', 'like', "%{$q}%")
+                        ->orWhere('unidades_saude.email', 'like', "%{$q}%")
+                        ->orWhere('enderecos.cep', 'like', "%{$q}%")
+                        ->orWhere('enderecos.logradouro', 'like', "%{$q}%")
+                        ->orWhere('enderecos.complemento', 'like', "%{$q}%")
+                        ->orWhere('enderecos.bairro', 'like', "%{$q}%");
+                    })
+                    ->orderBy('unidades_saude.nome')
+                    ->orderBy('enderecos.bairro')
+                    ->paginate($paginate);
+        } else {
+            $unidadesSaude = Unidade::select('unidades_saude.*')
+                    ->join('enderecos', 'enderecos.owner_id', '=', 'unidades_saude.id')
+                    ->where(function ($query) use ($request) {
+                        $q = trim($request->q);
+                        $query->where('unidades_saude.nome', '!=', "")
+                        ->orWhere('enderecos.bairro', '!=', "");
+                    })
+                    ->orderBy('unidades_saude.nome')
+                    ->orderBy('enderecos.bairro')
+                    ->paginate($paginate);
+        }
+
+        return view("pages.unidades-de-saude", [
+            "unidadesSaude" => $unidadesSaude,
         ]);
     }
 }
