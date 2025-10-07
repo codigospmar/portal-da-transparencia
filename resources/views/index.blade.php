@@ -18,7 +18,7 @@
             @include('components._cardDropDown', [
                 "id" => "receitas",
                 "dropdownId" => "receitasId",
-                "fontawesome" => "<i class='fs-1 fas fa-money-bill-wave text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-money-bill-wave text-white fa-3x'></i>",
                 "title" => "Receitas",
                 "dropdown" => [
                     [
@@ -48,7 +48,7 @@
             @include('components._cardDropDown', [
                 "id" => "despesas",
                 "dropdownId" => "despesasId",
-                "fontawesome" => "<i class='fs-1 fas fa-file-invoice-dollar text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-file-invoice-dollar text-white fa-3x'></i>",
                 "title" => "Despesas",
                 "dropdown" => [
                     [
@@ -73,7 +73,7 @@
             @include('components._cardDropDown', [
                 "id" => "convenios",
                 "dropdownId" => "conveniosId",
-                "fontawesome" => "<i class='fs-1 fas fa-handshake text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-handshake text-white fa-3x'></i>",
                 "title" => "Convênios",
                 "dropdown" => [
                     [
@@ -93,7 +93,7 @@
             @include('components._cardDropDown', [
                 "id" => "emendas",
                 "dropdownId" => "emendasId",
-                "fontawesome" => "<i class='fs-1 fas fa-file-contract text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-file-contract text-white fa-3x'></i>",
                 "title" => "Emendas",
                 "dropdown" => [
                     [
@@ -114,7 +114,7 @@
                 "id" => "balancos",
                 "link" => route('pages.balancos-contabeis'),
                 "target" => "_self",
-                "fontawesome" => "<i class='fs-1 fas fa-balance-scale text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-balance-scale text-white fa-3x'></i>",
                 "title" => "Balanços Contábeis",
             ])
 
@@ -122,7 +122,7 @@
             @include('components._cardDropDown', [
                 "id" => "leisOrcamentarias",
                 "dropdownId" => "leisOrcamentariasId",
-                "fontawesome" => "<i class='fs-1 fas fa-gavel text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-gavel text-white fa-3x'></i>",
                 "title" => "Leis Orçamentárias",
                 "dropdown" => [
                     [
@@ -146,9 +146,9 @@
             <!-- RREO e RGF --> 
             @include('components._cardSingle', [
                 "id" => "RREORGF",
-                "link" => route('pages.responsabilidade-fiscal'),
+                "link" => route('pages.rreo'),
                 "target" => "_self",
-                "fontawesome" => "<i class='fs-1 fas fa-file-alt text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-file-alt text-white fa-3x'></i>",
                 "title" => "RREO e RGF",
                 "small" => "Lei de Responsabilidade Fiscal",
             ])
@@ -157,7 +157,7 @@
             @include('components._cardDropDown', [
                 "id" => "prestacaoDeContas",
                 "dropdownId" => "prestacaoDeContasId",
-                "fontawesome" => "<i class='fs-1 fas fa-clipboard-check text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-clipboard-check text-white fa-3x'></i>",
                 "title" => "Prestação de Contas",
                 "dropdown" => [
                     [
@@ -177,7 +177,7 @@
             @include('components._cardDropDown', [
                 "id" => "audienciasPublicas",
                 "dropdownId" => "audienciasPublicasId",
-                "fontawesome" => "<i class='fs-1 fas fa-users text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-users text-white fa-3x'></i>",
                 "title" => "Audiências Públicas",
                 "dropdown" => [
                     [
@@ -203,7 +203,7 @@
                 "id" => "prefeituraEletronica",
                 "link" => "https://www.spe.angra.rj.gov.br/Capa.aspx",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fs-1 fas fa-laptop-house text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-laptop-house text-white fa-3x'></i>",
                 "title" => "Prefeitura Eletrônica",
                 "small" => "Iptu, NFS-e, Iss e outros",
             ])
@@ -215,7 +215,7 @@
 //                "link" => route("pages.divida-ativa"),
                 "target" => "_blank",
 //                "target" => "_self",
-                "fontawesome" => "<i class='fs-1 fas fa-file-invoice text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-file-invoice text-white fa-3x'></i>",
                 "title" => "Dívida Ativa",
             ])
 
@@ -224,7 +224,7 @@
                 "id" => "andamentoDeObras",
                 "link" => "https://obras.angra.rj.gov.br/",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fs-1 fas fa-hard-hat text-white fa-lg'></i>",
+                "fontawesome" => "<i class=' fas fa-hard-hat text-white fa-3x'></i>",
                 "title" => "Andamento de Obras",
             ])
 
@@ -238,7 +238,7 @@
             @include('components._cardDropDown', [
                 "id" => "estruturaOrganizacional",
                 "dropdownId" => "estruturaOrganizacionalId",
-                "fontawesome" => "<i class='fas fs-1 fa-sitemap text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-sitemap text-white fa-3x icon-hover'></i>",
                 "title" => "Estrutura Organizacional",
                 "dropdown" => [
                     [
@@ -264,7 +264,7 @@
                 "id" => "ouvidoria",
                 "link" => route('pages.ouvidoria'),
                 "target" => "_self",
-                "fontawesome" => "<i class='fas fs-1 fa-headset text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-headset text-white fa-3x icon-hover'></i>",
                 "title" => "Ouvidoria",
             ])
 
@@ -273,7 +273,7 @@
                 "id" => "eSIC",
                 "link" => "https://falabr.cgu.gov.br/web/home?modoOuvidoria=1&ouvidoriaInterna=false",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-envelope-open-text text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-envelope-open-text text-white fa-3x icon-hover'></i>",
                 "title" => "e-SIC",
             ])
 
@@ -281,7 +281,7 @@
             @include('components._cardDropDown', [
                 "id" => "saude",
                 "dropdownId" => "saudeId",
-                "fontawesome" => "<i class='fas fs-1 fa-heartbeat text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-heartbeat text-white fa-3x icon-hover'></i>",
                 "title" => "Saúde",
                 "dropdown" => [
                     [
@@ -316,7 +316,7 @@
             @include('components._cardDropDown', [
                 "id" => "educacao",
                 "dropdownId" => "educacaoId",
-                "fontawesome" => "<i class='fas fs-1 fa-graduation-cap text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-graduation-cap text-white fa-3x icon-hover'></i>",
                 "title" => "Educação",
                 "dropdown" => [
                     [
@@ -337,7 +337,7 @@
                 "id" => "esporte",
                 "link" => "https://angra.rj.gov.br/servicos/projetos-aprovados-pela-comissao-de-incentivo-ao-esporte",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-running text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-running text-white fa-3x icon-hover'></i>",
                 "title" => "Esporte",
                 "small" => "Projetos aprovados",
             ])
@@ -346,7 +346,7 @@
             @include('components._cardDropDown', [
                 "id" => "cultura",
                 "dropdownId" => "culturaId",
-                "fontawesome" => "<i class='fas fs-1 fa-paint-brush text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-paint-brush text-white fa-3x icon-hover'></i>",
                 "title" => "Cultura",
                 "dropdown" => [
                     [
@@ -371,7 +371,7 @@
             @include('components._cardDropDown', [
                 "id" => "conselhosMunicipais",
                 "dropdownId" => "conselhosMunicipaisId",
-                "fontawesome" => "<i class='fas fs-1 fa-users-cog text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-users-cog text-white fa-3x icon-hover'></i>",
                 "title" => "Conselhos Municipais",
                 "dropdown" => [
                     [
@@ -397,7 +397,7 @@
                 "id" => "metasProjetos",
                 "link" => "https://angra.prodataweb.inf.br/sig/app.html#/transparencia/transparencia-acompanhamento-ppa",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-chart-line text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-chart-line text-white fa-3x icon-hover'></i>",
                 "title" => "Metas e Projetos",
             ])
 
@@ -406,7 +406,7 @@
                 "id" => "perguntasFrequentes",
                 "link" => route('pages.ouvidoria-perguntas-frequentes'),
                 "target" => "_self",
-                "fontawesome" => "<i class='fas fs-1 fa-question-circle text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-question-circle text-white fa-3x icon-hover'></i>",
                 "title" => "Perguntas Frequentes",
             ])
             
@@ -420,7 +420,7 @@
             @include('components._cardDropDown', [
                 "id" => "licitacoes",
                 "dropdownId" => "licitacoesId",
-                "fontawesome" => "<i class='fas fs-1 fa-gavel text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-gavel text-white fa-3x icon-hover'></i>",
                 "title" => "Licitações",
                 "dropdown" => [
                     [
@@ -446,7 +446,7 @@
                 "id" => "contratos",
                 "link" => "https://portal.angra.rj.gov.br/contratos.asp?indexsigla=seges&QN=&QS=0&QF=&QO=&QC=&QA=2023&QT=0&QV=",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-file-contract text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-file-contract text-white fa-3x icon-hover'></i>",
                 "title" => "Contratos",
             ])
 
@@ -455,7 +455,7 @@
                 "id" => "legislacaoMunicipal",
                 "link" => "https://portal.angra.rj.gov.br/legislacao.asp?indexsigla=sgri",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-balance-scale text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-balance-scale text-white fa-3x icon-hover'></i>",
                 "title" => "Legislação Municipal",
             ])
 
@@ -464,7 +464,7 @@
                 "id" => "lgpd",
                 "link" => route('pages.lgpd'),
                 "target" => "_self",
-                "fontawesome" => "<i class='fas fs-1 fa-shield-alt text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-shield-alt text-white fa-3x icon-hover'></i>",
                 "title" => "LGPD",
                 "small" => "Lei Geral de Proteção de Dados",
             ])
@@ -474,7 +474,7 @@
                 "id" => "governoDigital",
                 "link" => "https://angra.rj.gov.br/servicos/governo-digital",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-laptop text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-laptop text-white fa-3x icon-hover'></i>",
                 "title" => "Governo Digital",
             ])
 
@@ -483,7 +483,7 @@
                 "id" => "radarDaTransparencia",
                 "link" => "https://radar.tce.mt.gov.br/extensions/radar-da-transparencia-publica/radar-da-transparencia-publica.html",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fa-solid fs-1 fa-magnifying-glass text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fa-solid  fa-magnifying-glass text-white fa-3x icon-hover'></i>",
                 "title" => "Radar da transparência",
             ])
             
@@ -497,7 +497,7 @@
             @include('components._cardDropDown', [
                 "id" => "remuneracaoDeServidores",
                 "dropdownId" => "remuneracaoDeServidoresId",
-                "fontawesome" => "<i class='fas fs-1 fa-money-check-alt text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-money-check-alt text-white fa-3x icon-hover'></i>",
                 "title" => "Remuneração de Servidores",
                 "dropdown" => [
                     [
@@ -522,7 +522,7 @@
             @include('components._cardDropDown', [
                 "id" => "diariasEPassagens",
                 "dropdownId" => "diariasEPassagensId",
-                "fontawesome" => "<i class='fas fs-1 fa-plane text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-plane text-white fa-3x icon-hover'></i>",
                 "title" => "Diárias e Passagens",
                 "dropdown" => [
                     [
@@ -543,7 +543,7 @@
                 "id" => "concursosPublicos",
                 "link" => route('pages.concursos'),
                 "target" => "_self",
-                "fontawesome" => "<i class='fas fs-1 fa-graduation-cap text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-graduation-cap text-white fa-3x icon-hover'></i>",
                 "title" => "Concursos Públicos",
             ])
             
@@ -558,7 +558,7 @@
                 "id" => "dadosAbertos",
                 "link" => "https://angra.rj.gov.br/servicos/dados-abertos",
                 "target" => "_blank",
-                "fontawesome" => "<i class='fas fs-1 fa-database text-white fa-lg icon-hover'></i>",
+                "fontawesome" => "<i class='fas  fa-database text-white fa-3x icon-hover'></i>",
                 "title" => "Dados Abertos",
             ])
 

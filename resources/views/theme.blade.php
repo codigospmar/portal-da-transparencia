@@ -3,7 +3,7 @@
 
 @include('elements.head')
 
-<body class="fade-in">
+<body class="fade-in animate__animated animate__fadeIn">
     <header>
         @include('elements.defaultBar')
         @include('elements.nav')

@@ -6,7 +6,7 @@
                     {!! $fontawesome !!}
                 </span>
 
-                <span class="text-start">
+                <span class="text-start text-dark me-2">
                     <strong>{{ __($title) }}</strong>
                     @if(isset($small))
                         <small class="d-block text-muted">{{ __($small) }}</small>

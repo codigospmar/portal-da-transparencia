@@ -2,7 +2,7 @@
 
 .defaultBar {
     height: 42px;
-    background-color: #db86a2;
+    background-color: var(--primary);
 }
 
 .defaultBarLogo img {

@@ -31,8 +31,8 @@
             <div class="col-xl-6 col-lg-8 col-md-10">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
-                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4">
-                            <i class="fa-solid fa-file-contract text-success fs-2"></i>
+                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4 text-white">
+                            <i class="fa-solid fa-file-contract text-white fs-2"></i>
                         </div>
                         <h3 class="card-title text-dark mb-3">Emenda Parlamentar: 202437650003</h3>
                         <p class="text-muted mb-4">Deputada Soraya Santos</p>
@@ -56,8 +56,8 @@
             <div class="col-xl-6 col-lg-8 col-md-10">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
-                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4">
-                            <i class="fa-solid fa-circle-info text-success fs-2"></i>
+                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4 text-white">
+                            <i class="fa-solid fa-circle-info text-white fs-2"></i>
                         </div>
                         <h3 class="card-title text-dark mb-3">Informação</h3>
                         <p class="text-muted mb-4">O município não recebeu emenda impositiva individual (orçamento secreto) no exercício de 2023.</p>
@@ -78,8 +78,8 @@
             <div class="col-xl-6 col-lg-8 col-md-10">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
-                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4">
-                            <i class="fa-solid fa-circle-info text-success fs-2"></i>
+                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4 text-white">
+                            <i class="fa-solid fa-circle-info text-white fs-2"></i>
                         </div>
                         <h3 class="card-title text-dark mb-3">Informação</h3>
                         <p class="text-muted mb-4">O município não recebeu emenda impositiva individual (orçamento secreto) no exercício de 2022.</p>

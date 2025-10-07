@@ -25,8 +25,8 @@
             <div class="col-xl-5 col-lg-6 col-md-6">
                 <div class="card h-100 border-0 shadow-sm">
                     <div class="card-body text-center p-4">
-                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4">
-                            <i class="fa-solid fa-theater-masks text-success fs-2"></i>
+                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4 text-white">
+                            <i class="fa-solid fa-theater-masks text-white fs-2"></i>
                         </div>
                         <h3 class="card-title text-dark mb-3">2024</h3>
                         <p class="text-muted mb-4">Demonstrativo - Renúncia de receita como incentivo à cultura</p>

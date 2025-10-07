@@ -27,8 +27,8 @@
             <div class="col-xl-3 col-lg-4 col-md-6 mx-auto">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body text-center p-4">
-                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4">
-                            <i class="fa-solid fa-file-excel text-success fs-2"></i>
+                        <div class="bg-green bg-opacity-10 p-3 rounded-3 d-inline-flex mb-4 text-white">
+                            <i class="fa-solid fa-file-excel text-white fs-2"></i>
                         </div>
                         <h3 class="card-title text-dark mb-3">Planilhas</h3>
                         <p class="text-muted mb-4">Baixe os dados em formato Excel ou CSV</p>
@@ -124,7 +124,7 @@
                                         <td>14730002</td>
                                         <td>2018</td>
                                         <td>877735</td>
-                                        <td><span class="badge bg-success">Prestação de Contas Concluída</span></td>
+                                        <td><span class="badge bg-softGray text-green">Prestação de Contas Concluída</span></td>
                                         <td>Implantação de academia ao ar livre.</td>
                                         <td>Esportes e Cultura</td>
                                         <td>CONTRATO DE REPASSE</td>
@@ -232,7 +232,7 @@
                                         <td>23970008</td>
                                         <td>2018</td>
                                         <td>877778</td>
-                                        <td><span class="badge bg-success">Prestação de Contas Concluída</span></td>
+                                        <td><span class="badge bg-softGray text-green">Prestação de Contas Concluída</span></td>
                                         <td>Aquisição e instalação de equipamentos - Academia ao ar livre.</td>
                                         <td>Esportes e Cultura</td>
                                         <td>CONTRATO DE REPASSE</td>
@@ -244,7 +244,7 @@
                                         <td>17750025</td>
                                         <td>2020</td>
                                         <td>903728</td>
-                                        <td><span class="badge bg-success">Prestação de Contas Concluída</span></td>
+                                        <td><span class="badge bg-softGray text-green">Prestação de Contas Concluída</span></td>
                                         <td>Aquisição de veículo adaptado para o Conselho Municipal dos Direitos da Pessoa com Deficiência.</td>
                                         <td>Assistência Social</td>
                                         <td>CONVENIO</td>
@@ -304,7 +304,7 @@
                                         <td>27890005</td>
                                         <td>2018</td>
                                         <td>875069</td>
-                                        <td><span class="badge bg-success">Prestação de Contas Concluída</span></td>
+                                        <td><span class="badge bg-softGray text-green">Prestação de Contas Concluída</span></td>
                                         <td>Ampliação da praça Vereador Carlos Alberto Tavares para aquisição e instalação de Academia ao ar livre.</td>
                                         <td>Obras e Investimentos</td>
                                         <td>CONTRATO DE REPASSE</td>

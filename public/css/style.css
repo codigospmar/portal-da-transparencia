@@ -1,7 +1,7 @@
-/* FONTE PADRÃƒO*/
+/* FONTE PADRÃO*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900');
-/* FIM FONTE PADRÃƒO */
+/* FIM FONTE PADRÃO */
 
 .top50 {
     margin-top: 50px;
@@ -29,13 +29,29 @@
 
 /* CORES 2025 */
 :root {
-    /* Cores principais */
-    --primary: #ff4c86;
-    --dark-blue: #c45477;
-    --backDark-blue: #6a3f4d;
+    /* TEMA DO PORTAL */
+    --primary: #21409a;
+    --waves-background: #21409a;
+    --topo-nav-background: #21409a;
+    --card-title: #21409a;
+    --home-links: #21409a;
+    --subtitle-home: #21409a;
+    --link-help: #21409a;
+    --home-social: #21409a;
+    --link-help-text: #21409a;
+    --galeria-background: #21409a;
+    --pontos-turisticos-title: #21409a;
+    --footer-background: #21409a;
+    --defaultBar-background: #21409a;
+
+        /* TEMA DO ADMIN */
+    --primary-admin: #c45477;
+    --secondary-admin: #6a3f4d;
+
+    /* DEMAIS CORES PERSONALIZADAS */
     --secondary: #3399d1;
     --tertiary: #76caa3;
-    --success: #7ac89a;
+    --success: #579681;
     --info: #3399d1;
     --cake-blue: #def3ff;
     --gray: #ececec;
@@ -80,7 +96,7 @@
     --orange-hover: #b57d4f;
 }
 
-/* ========== CLASSES UTILITÃRIAS BÃSICAS ========== */
+/* ========== CLASSES UTILITÁRIAS BÁSICAS ========== */
 
 /* CORES DE TEXTO */
 .text-primary {
@@ -348,7 +364,7 @@
 
 /* ========== COMPONENTES ========== */
 
-/* BOTÃ•ES */
+/* BOTÕES */
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
@@ -411,7 +427,7 @@
     border-color: #e6893d;
 }
 
-/* BOTÃ•ES OUTLINE */
+/* BOTÕES OUTLINE */
 .btn-outline-primary {
     color: var(--primary);
     border-color: var(--primary);
@@ -498,7 +514,7 @@
 
 
 
-/* BotÃµes para cores adicionais */
+/* Botões para cores adicionais */
 .btn-purple {
     background-color: var(--purple);
     border-color: var(--purple);
@@ -1640,14 +1656,14 @@ a {
     background-image: url('../assets/img/waves-background-white.svg');
     background-size: 100%;
     background-repeat: repeat;
-    background-color: #ff4c86;
+    background-color: var(--waves-background);
 }
 
 /* FIM CORES 2025 */
 
 
 
-/*--------------- HEADER INÃCIO ------------*/
+/*--------------- HEADER INÍCIO ------------*/
 
 .topo-logo {
     display: flex;
@@ -1664,7 +1680,7 @@ img.topo-logo-img {
 }
 
 .topo-nav {
-    background: #ff4c86;
+    background: var(--topo-nav-background);
     /* background: linear-gradient(90deg, rgba(0, 123, 192, 1) 0%, rgba(0, 169, 255, 1) 100%); */
 }
 
@@ -1689,7 +1705,7 @@ img.topo-logo-img {
 /*--------------- HEADER FIM ------------*/
 
 
-/*--------------- MENU INÃCIO ------------*/
+/*--------------- MENU INÍCIO ------------*/
 
 .nav {
     display: flex;
@@ -1889,7 +1905,7 @@ body {
     --gutter-x: 3rem !important;
 }
 
-/*--------------- HOME NOTÃCIAS INÃCIO ------------*/
+/*--------------- HOME NOTÍCIAS INÍCIO ------------*/
 
 .home-noticias {
     padding-top: 100px;
@@ -1964,7 +1980,7 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #ff4c86;
+    color: var(--card-title);
 }
 
 .card-text {
@@ -2040,18 +2056,18 @@ body {
 }
 
 
-/*--------------- HOME NOTÃCIAS FIM ------------*/
+/*--------------- HOME NOTÍCIAS FIM ------------*/
 
 
-/* SLUG NOTÃCIAS INÃCIO */
+/* SLUG NOTÍCIAS INÍCIO */
 .desc p {
     padding-bottom: 1.75rem;
 }
 
-/* SLUG NOTÃCIAS FIM */
+/* SLUG NOTÍCIAS FIM */
 
 
-/*--------------- HOME LINKS INSTITUCIONAIS INÃCIO ------------*/
+/*--------------- HOME LINKS INSTITUCIONAIS INÍCIO ------------*/
 
 .home-links-institucionais {
     padding-top: 120px;
@@ -2091,7 +2107,7 @@ body {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 16px;
-    color: #ff4c86;
+    color: var(--home-links);
 }
 
 .home-links-institucionais .home-institucionais-row .home-institucionais-item p {
@@ -2197,7 +2213,7 @@ body {
 
 
 
-/*--------------- HOME GUIA RÃPIDO INÃCIO ------------*/
+/*--------------- HOME GUIA RÁPIDO INÍCIO ------------*/
 
 .home-guia-rapido {
     padding-top: 100px;
@@ -2208,14 +2224,14 @@ body {
 .subtitle-home {
     font-size: 3.2rem;
     font-weight: 600;
-    color: #ff4c86;
+    color: var(--subtitle-home);
     margin-bottom: 80px;
     text-align: center;
     letter-spacing: -1px;
 }
 
 .link-help {
-    border-left: solid 3px #ff4c86;
+    border-left: solid 3px var(--link-help);
     padding-left: 24px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2254,7 +2270,7 @@ body {
 }
 
 .link-help .text-primary {
-    color: #ff4c86 !important;
+    color: var(--link-help-text) !important;
 
 }
 
@@ -2287,7 +2303,7 @@ body {
 }
 
 
-/*--------------- HOME GUIA RÃPIDO FIM ------------*/
+/*--------------- HOME GUIA RÁPIDO FIM ------------*/
 
 
 
@@ -2377,7 +2393,7 @@ body {
 /*--------------- HOME VIDEO INSTITUCIONAL FIM ------------*/
 
 
-/* INÃCIO - TOPICOS MAIS BUSCADOS - NOVO */
+/* INÍCIO - TOPICOS MAIS BUSCADOS - NOVO */
 
 .home-mais-buscados .home-mais-buscados-col {
     display: flex;
@@ -2441,7 +2457,7 @@ body {
 
 
 
-/*--------------- HOME REDES SOCIAIS INÃCIO ------------*/
+/*--------------- HOME REDES SOCIAIS INÍCIO ------------*/
 
 .home-redes-sociais {
     padding-top: 80px;
@@ -2479,7 +2495,7 @@ body {
     border-radius: 15px;
     width: 70px;
     height: 70px;
-    color: #ff4c86;
+    color: var(--home-social);
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -2488,12 +2504,12 @@ body {
 
 
 
-/*--------------- HOME GALERIA FOTOS INÃCIO ------------*/
+/*--------------- HOME GALERIA FOTOS INÍCIO ------------*/
 
 .home-galeria-fotos {
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #ff4c86;
+    background-color: var(--galeria-background);
     overflow-x: hidden !important;
 }
 
@@ -2656,7 +2672,7 @@ body {
 
 
 
-/*--------------- HOME PONTOS TURÃSTICOS INÃCIO ------------*/
+/*--------------- HOME PONTOS TURÍSTICOS INÍCIO ------------*/
 
 .home-pontos-turisticos {
     padding-top: 100px;
@@ -2674,7 +2690,7 @@ body {
 .home-pontos-turisticos h3 {
     font-weight: 600;
     letter-spacing: -1pt;
-    color: #ff4c86;
+    color: var(--pontos-turisticos-title);
     font-size: 22pt;
     margin-bottom: 50px;
 }
@@ -2793,10 +2809,10 @@ body {
 
 
 
-/*--------------- HOME PONTOS TURÃSTICOS FIM ------------*/
+/*--------------- HOME PONTOS TURÍSTICOS FIM ------------*/
 
 
-/*--------------- HOME FOOTER INÃCIO ------------*/
+/*--------------- HOME FOOTER INÍCIO ------------*/
 
 footer {
     padding-top: 100px;
@@ -2804,7 +2820,7 @@ footer {
 }
 
 footer.footer-pmar {
-    background-color: #ff4c86;
+    background-color: var(--footer-background);
     color: #ffffff;
     font-size: 1rem;
 }
@@ -3198,7 +3214,7 @@ a {
 }
 
 
-/* PAGINAÃ‡ÃƒO */
+/* PAGINAÇÃO */
 .pagination {
     display: flex !important;
     justify-content: center !important;
@@ -3251,8 +3267,8 @@ a {
     font-size: 1.75rem !important;
 }
 
-.pagination .page-link[aria-label="Â« Previous"],
-.pagination .page-link[aria-label="Next Â»"] {
+.pagination .page-link[aria-label="« Previous"],
+.pagination .page-link[aria-label="Next »"] {
     color: var(--secondary) !important;
     font-size: 2.5rem !important;
     margin: 0 !important;
@@ -3294,7 +3310,7 @@ a {
     }
 }
 
-/* FIM PAGINAÃ‡ÃƒO */
+/* FIM PAGINAÇÃO */
 
 
 
@@ -3377,7 +3393,7 @@ a {
     right: 40px;
     width: 50px;
     height: 50px;
-    background-color: var(--warning);
+    background-color: var(--tertiary);
     border: none;
     border-radius: 10px;
     display: none;
@@ -3389,6 +3405,7 @@ a {
     z-index: 1000;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    color: white;
 }
 
 #backToTop.show {
@@ -3611,7 +3628,7 @@ a {
 
 /* NOTICIAS HOME */
 
-/* PÃGINA NOTICIAS */
+/* PÁGINA NOTICIAS */
 .news-card {
     border: none;
     border-radius: 12px;
@@ -3722,7 +3739,7 @@ a {
     }
 }
 
-/* FIM PÃGINAS NOTICIAS */
+/* FIM PÁGINAS NOTICIAS */
 
 
 /* SLUG */
@@ -3806,7 +3823,7 @@ a {
     font-weight: bold;
 }
 
-/* Portal da TransparÃªncia */
+/* Portal da Transparência */
 .row.g-3 {
     gap: 20px;
     justify-content: center;
@@ -3945,7 +3962,7 @@ a {
     visibility: visible;
 }
 
-/* FIM Portal da TransparÃªncia */
+/* FIM Portal da Transparência */
 
 .btn-home {
     margin-top: auto;
@@ -4136,7 +4153,7 @@ a.btn-ouvidoria {
 }
 
 
-/* BOLETINS INÃCIO */
+/* BOLETINS INÍCIO */
 
 
 .table>:not(caption)>*>* {
@@ -4402,7 +4419,7 @@ a.btn-ouvidoria {
     height: 500px !important;
 }
 
-/* TRANSPARÃŠNCIA */
+/* TRANSPARÊNCIA */
 .topo-logo-transparencia {
     display: flex;
     flex-direction: row;
@@ -4417,7 +4434,7 @@ a.btn-ouvidoria {
 
 .topo-nav-transparencia {
     background: var(--success);
-    background: linear-gradient(90deg, var(--success) 0%, rgb(94, 141, 129) 100%);
+    background: linear-gradient(90deg, var(--success) 0%, rgb(186, 224, 215) 100%);
 }
 
 footer.footer-pmar-transparencia {
@@ -4473,3 +4490,57 @@ footer.footer-pmar-transparencia .footer-pmar-icons {
 .accordion-button:not(.collapsed) {
     background-color: transparent !important;
 }
+
+
+/* --------------- ADMIN LOGIN INÍCIO ------------ */
+
+
+.form-check-input:checked {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+
+.form-check-input {
+    background-color: #acacac;
+    border-color: #acacac;
+}
+
+.form-check-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+body #loginArea {
+    margin: 0;
+    padding: 0;
+    background: url(../assets/img/ilhacombarco.jpg) #fff;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    filter: brightness(50%);
+    mix-blend-mode: multiply;
+}
+
+
+.card-admin-login {
+    background-color: rgba(187, 187, 187, 0.314);
+    /* Fundo branco com transparência */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque */
+    border-radius: 45px;
+}
+
+
+/* --------------- ADMIN LOGIN FIM ------------ */

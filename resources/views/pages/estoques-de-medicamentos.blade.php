@@ -39,7 +39,7 @@
                             Relatório histórico dos medicamentos disponíveis em maio de 2025.
                         </p>
                         <div class="d-flex justify-content-between align-items-center my-3">
-                            <span class="badge bg-success">Disponível</span>
+                            <span class="badge bg-softGray text-green">Disponível</span>
                             <a href="https://angra.rj.gov.br/downloads/SSA/MEDICAMENTOS-DA-REDE-BASICO-DISP-11072025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm btn-sm">
                                 <i class="fas fa-download me-1"></i> Baixar PDF
                             </a>
@@ -70,7 +70,7 @@
                             Relatório histórico dos medicamentos disponíveis em maio de 2025.
                         </p>
                         <div class="d-flex justify-content-between align-items-center my-4">
-                            <span class="badge bg-success">Arquivo</span>
+                            <span class="badge bg-softGray text-green">Arquivo</span>
                             <a href="https://angra.rj.gov.br/downloads/SSA/MEDICAMENTOS-DA-REDE-BASICO-DISP-20052025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm  btn-sm">
                                 <i class="fas fa-download me-1"></i> Baixar PDF
                             </a>

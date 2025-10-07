@@ -35,25 +35,25 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2025/PPA_Lei-n-4427.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei Nº 4.427</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2025/PPA_Revisao-PPA-2022-2025-Exercicios-2025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-chart-bar text-success me-2"></i>Revisão PPA 2022-2025</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2025/PPA_2025.csv" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-csv text-success me-2"></i>Revisão PPA 2022-2025</span>
-                                       <span class="badge bg-success">CSV</span>
+                                       <span class="badge bg-softGray text-green">CSV</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2025/PPA_Descritivo-Revisao-PPA-2025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Descritivo Revisão PPA 2022-2025</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -74,7 +74,7 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2024/PPA-2024_Lei-4269-2023.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei Nº 4.269</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -95,19 +95,19 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2023/PPA-Lei-4153-2022/4153-2022 - PPA.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei 4.153</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2023/PPA-Lei-4153-2022/REVISAO PPA 2022-2025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-chart-bar text-success me-2"></i>Revisão PPA 2022-2025</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2023/PPA-Lei-4153-2022/Descritivo Revisao PPA 2023 - correto.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Descritivo Revisão PPA 2023</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -128,19 +128,19 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2022/PPA-Lei4023_10-12-2021/1-Lei-N-4023-10122021.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei 4.023</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2022/PPA-Lei4023_10-12-2021/2-Descritivo-PPA-2022-2025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Descritivo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2022/PPA-Lei4023_10-12-2021/3-ANEXO-PPA-2022-2025.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-chart-bar text-success me-2"></i>Plano Plurianual 2022 / 2025</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -161,19 +161,19 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2021/3941-2020-PPA/0-3.941-2020-PPA.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.941</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2021/3941-2020-PPA/1-RevisaoPPA2018-2021-Descritivo.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2021/3941-2020-PPA/2-PPA2018-2021.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-chart-bar text-success me-2"></i>Plano Plurianual 2018 / 2021</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -194,13 +194,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2020/3916-2019-PPA/Lei3916.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.916</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/cgm/leisorcamentarias/2020/3916-2019-ppa/PPA-Atualizado-Emenda.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -221,13 +221,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2019/3819-2018-PPA/Lei-3819.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.819</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2019/3819-2018-PPA/Anexo-1.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo 1</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -248,19 +248,19 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2018/PPA-3.715-2017/3.715-2017-PPA-Lei.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.715</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2020/audiencia-publica-ppa-2020.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-users text-success me-2"></i>Audiência Pública</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2018/PPA-3.715-2017/3.715-2017-PPA-Anexo V.PDF" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -284,13 +284,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2017/3.613-2016-PPA/3.613-2016-Lei.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.613</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2017/3.613-2016-PPA/CONSOLIDADO-PPA-2017-COM-ALTERACAO-CMAR.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -314,13 +314,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2016/3.455-2015-PPA/3.455-2015-ppa-Lei.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.455</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2016/3.455-2015-PPA/3.455-2015-ppa-anexo.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -341,13 +341,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2015/PPA Lei n 3.326_2014_Revisao do PPA.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.326</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2015/PPA_2015 - 01-12-2014.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -368,13 +368,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2013/PPA_3163/Lei_3.163-2013.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>Lei nº 3.163</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2013/PPA_3163/PPA_2014-2017.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
@@ -395,13 +395,13 @@
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2013/PPA_2972/Lei2972-2012.pdf" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-gavel text-success me-2"></i>PPA - Plano Plurianual</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                                <div class="col-md-6">
                                    <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2013/PPA_2972/ANEXO I - DEMONSTRATIVO DE PROGRAMAS E AÇÕES POR ÓRGÃO E UNIDADE.PDF" target="_blank" class="btn btn-outline-success border-0 shadow-sm rounded-3 w-100 text-start d-flex justify-content-between align-items-center border-success">
                                        <span><i class="fas fa-file-alt text-success me-2"></i>Anexo I</span>
-                                       <span class="badge bg-success">PDF</span>
+                                       <span class="badge bg-softGray text-green">PDF</span>
                                    </a>
                                </div>
                            </div>
