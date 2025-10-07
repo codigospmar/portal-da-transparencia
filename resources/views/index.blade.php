@@ -211,8 +211,10 @@
             <!-- Dívida Ativa -->
             @include('components._cardSingle', [
                 "id" => "dividaAtiva",
-                "link" => route("pages.divida-ativa"),
-                "target" => "_self",
+                "link" => "https://portal.angra.rj.gov.br/transp-divida-ativa.asp?IndexSigla=transp",
+//                "link" => route("pages.divida-ativa"),
+                "target" => "_blank",
+//                "target" => "_self",
                 "fontawesome" => "<i class='fs-1 fas fa-file-invoice text-white fa-lg'></i>",
                 "title" => "Dívida Ativa",
             ])
