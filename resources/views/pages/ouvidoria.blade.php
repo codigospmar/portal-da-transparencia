@@ -36,7 +36,7 @@
                     <a href="{{ route('pages.ouvidoria-informacoes-classificadas') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
                         <i class="fas fa-lock me-2"></i>Informações Classificadas
                     </a>
-                    <a href="https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
+                    <a href="{{ route("pages.ouvidoria-relatorio-de-manifestacoes") }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
                         <i class="fas fa-chart-bar me-2"></i>Relatórios de Manifestações
                     </a>
                 </div>

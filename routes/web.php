@@ -55,7 +55,7 @@ Route::group(["as" => "pages."], function () {
     Route::view('/ouvidoria', 'pages.ouvidoria')->name("ouvidoria");
     Route::view("ouvidoria/perguntas-frequentes", 'pages.ouvidoria-perguntas-frequentes')->name('ouvidoria-perguntas-frequentes');
     Route::view("ouvidoria/sobre", 'pages.ouvidoria-sobre')->name('ouvidoria-sobre');
-    Route::redirect("ouvidoria/relatorios", 'https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp')->name('ouvidoria-relatorios');
+    Route::get("ouvidoria/relatorio-de-manifestacoes", [PortalController::class, "relatoriosDeManifestacoes"])->name('ouvidoria-relatorio-de-manifestacoes');
     Route::view("ouvidoria/informacoes-classificadas", 'pages.ouvidoria-informacoes-classificadas')->name('ouvidoria-informacoes-classificadas');
 });
 
