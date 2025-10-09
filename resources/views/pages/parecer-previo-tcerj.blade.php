@@ -71,7 +71,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2021</h3>
-                            <a href="https://angra.rj.gov.br/downloads/CGM/PrestacaodeContas/2021-PARECER-PREVIO-CONTAS-GOVERNO.PDF" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/CGM/PrestacaodeContas/2021-PARECER-PREVIO-CONTAS-GOVERNO.pdf" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>
@@ -95,7 +95,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2019</h3>
-                            <a href="https://angra.rj.gov.br/downloads/CGM/PrestacaodeContas/2019_Relatorio-e-Parecer.PDF" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/CGM/PrestacaodeContas/2019_Relatorio-e-Parecer.pdf" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>
@@ -119,7 +119,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2017</h3>
-                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/17-212768-2018_228-VOTO-FINAL-PRESTACAO-CONTAS-2017.PDF" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/17-212768-2018_228-VOTO-FINAL-PRESTACAO-CONTAS-2017.pdf" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>
@@ -131,7 +131,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2016</h3>
-                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/16-206028-2017_57-VOTO-PREST-CONTAS-2016.PDF" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/16-206028-2017_57-VOTO-PREST-CONTAS-2016.pdf" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>
