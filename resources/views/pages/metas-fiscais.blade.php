@@ -5,21 +5,26 @@
 
     <div class="container py-5">
         <!-- Breadcrumb -->
-        <nav class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ env("PORTAL_ANGRA") }}">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Portal da Transparência</a></li>
-                <li class="breadcrumb-item active">Audiências Públicas das Metas Fiscais</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Audiências Públicas das Metas Fiscais"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Audiências Públicas das Metas Fiscais</h1>
-                <p class="lead text-muted">Atas de Audiências Públicas das metas fiscais e da saúde e os seus respectivos comprovantes de chamamento.</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Audiências Públicas das Metas Fiscais"),
+            "summary" => __("Atas de Audiências Públicas das metas fiscais e da saúde e os seus respectivos comprovantes de chamamento."),
+        ])
 
         <!-- Botão Lei Complementar -->
         <div class="row mb-4 justify-content-center">

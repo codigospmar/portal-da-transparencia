@@ -5,22 +5,28 @@
 
     <div class="container py-5">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ env("PORTAL_ANGRA") }}">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Portal da Transparência</a></li>
-                <li class="breadcrumb-item active">LOA - Lei Orçamentária Anual</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("LOA - Lei Orçamentária Anual"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Lei Orçamentária Anual - LOA</h1>
-                <!-- <p class="lead text-muted">Estabelece as metas e prioridades para o ano financeiro subsequente, orientando a elaboração da lei orçamentária anual</p> -->
-            </div>
-        </div>
-
+        @include('components._titleMain', [
+            "title" => __("Lei Orçamentária Anual - LOA"),
+            "summary" => __(""),
+        ])
+        <!-- <p class="lead text-muted">Estabelece as metas e prioridades para o ano financeiro subsequente, orientando a elaboração da lei orçamentária anual</p> -->
+        
         <div class="accordion" id="accordionLOA">
 
             <!-- 2025 -->

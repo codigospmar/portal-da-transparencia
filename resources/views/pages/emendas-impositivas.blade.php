@@ -5,19 +5,26 @@
     <div class="container my-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Emendas Parlamentares Impositivas</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Emendas Parlamentares Impositivas"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Emendas Parlamentares Impositivas</h1>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Emendas Parlamentares Impositivas"),
+            "summary" => __(""),
+        ])
 
         <!-- 2024 -->
         <div class="row mb-4">

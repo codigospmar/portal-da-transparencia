@@ -4,21 +4,26 @@
 <section>
 
     <div class="container py-5">
-        <!-- Breadcrumb -->
-        <nav class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Atas das Audiências Públicas</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Atas das Audiências Públicas"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Atas das Audiências Públicas</h1>
-                <p class="lead text-muted">Atas de Audiências Públicas das metas fiscais e da saúde e os seus respectivos comprovantes de chamamento.</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Atas das Audiências Públicas"),
+            "summary" => __("Atas de Audiências Públicas das metas fiscais e da saúde e os seus respectivos comprovantes de chamamento."),
+        ])
 
         <!-- Accordion de Anos -->
         <div class="accordion" id="accordionAtas">

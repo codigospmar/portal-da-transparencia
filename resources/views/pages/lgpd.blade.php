@@ -5,20 +5,26 @@
     <div class="container my-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Proteção de Dados e Segurança da Informação</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Proteção de Dados e Segurança da Informação"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Proteção de Dados e Segurança da Informação</h1>
-                <p class="lead fs-4 text-soft">Garantindo a segurança e privacidade das informações</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Proteção de Dados e Segurança da Informação"),
+            "summary" => __("Garantindo a segurança e privacidade das informações"),
+        ])
 
         <!-- Conteúdo Principal -->
         <div class="row justify-content-center">

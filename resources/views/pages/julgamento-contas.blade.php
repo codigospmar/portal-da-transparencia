@@ -4,19 +4,26 @@
 <section>
     <div class="container my-5 pb-5">
     
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Julgamento das contas do Executivo pelo Legislativo</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Julgamento das contas do Executivo pelo Legislativo"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Julgamento das contas do Executivo pelo Legislativo</h1>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Julgamento das contas do Executivo pelo Legislativo"),
+            "summary" => __(""),
+        ])
 
         <!-- Breadcrumb -->
 

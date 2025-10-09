@@ -5,20 +5,26 @@
     <div class="container my-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Incentivos Culturais</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Incentivos Culturais"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Incentivos Culturais</h1>
-                <p class="lead fs-4 text-soft">Prefeitura Municipal de Angra dos Reis</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Incentivos Culturais"),
+            "summary" => __("Prefeitura Municipal de Angra dos Reis"),
+        ])
 
         <div class="row g-4 justify-content-center">
             <!-- Pessoa Jurídica - Imobiliário -->

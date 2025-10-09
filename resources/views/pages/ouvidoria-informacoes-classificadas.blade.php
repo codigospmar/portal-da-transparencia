@@ -5,19 +5,33 @@
 
     <div class="container">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-3">
-            <ol class="breadcrumb small">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Informações Classificadas e Desclassificadas</li>
-            </ol>
-        </nav>
-
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'route' => route('pages.ouvidoria'),
+                    'title' => __("Ouvidoria"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Informações Classificadas e Desclassificadas"),
+                ],
+            ];
+        @endphp
+            
+        @include('components._breadcrumb', $breadcrumbs)
+        
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Informações / Documentos Classificados e Desclassificados</h1>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Informações / Documentos Classificados e Desclassificados"),
+            "summary" => __(""),
+        ])
+        
+        
+        @include('components._bottunsNavOuvidoria')
 
         <div class="container my-5">
             <article class="article-main">

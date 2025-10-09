@@ -5,19 +5,26 @@
 
     <div class="container py-5">
         <!-- Breadcrumb -->
-        <nav class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Audiências Públicas - Leis Orçamentárias</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Audiências Públicas - Leis Orçamentárias"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Audiências Públicas - Leis Orçamentárias</h1>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Audiências Públicas - Leis Orçamentárias"),
+            "summary" => __(""),
+        ])
 
         <!-- Accordion de Anos -->
         <div class="accordion" id="accordionLeisOrcamentarias">

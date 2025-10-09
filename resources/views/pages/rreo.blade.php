@@ -5,21 +5,27 @@
     <div class="container my-5 pb-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">RREO - Relatórios bimestrais da execução orçamentária</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("RGF - RREO - Relatórios Bimestrais da Execução Orçamentária"),
+                ],
+            ];
+        @endphp
+
+        @include('components._breadcrumb', $breadcrumbs)
 
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Relatório Resumido de Execução Orçamentária</h1>
-                <p class="lead text-muted">RREO - Relatórios bimestrais da execução orçamentária</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Relatório Resumido de Execução Orçamentária"),
+            "summary" => __("RREO - Relatórios bimestrais da execução orçamentária"),
+        ])
 
         <!-- Accordion de Anos -->
         <div class="accordion" id="accordionRREO">

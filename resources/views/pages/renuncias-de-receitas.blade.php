@@ -5,20 +5,26 @@
     <div class="container my-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Renúncias de Receitas</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Renúncias de Receitas"),
+                ],
+            ];
+        @endphp
+
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Estimativa e compensação da renúncia de receita</h1>
-                <p class="lead fs-4 text-soft">Acesse os demonstrativos anuais de forma rápida e intuitiva</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Estimativa e compensação da renúncia de receita"),
+            "summary" => __("Acesse os demonstrativos anuais de forma rápida e intuitiva."),
+        ])
 
         <!-- Cards dos Anos -->
         <div class="row g-4">
