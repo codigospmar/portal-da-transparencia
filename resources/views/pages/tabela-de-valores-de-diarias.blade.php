@@ -22,7 +22,7 @@
 
         <!-- Título Principal -->
         @include('components._titleMain', [
-            "title" => __("Tabela de valores das diárias"),
+            "title" => __("Tabela de Valores das Diárias"),
             "summary" => __("Normativas e atualizações sobre valores de diárias municipais"),
         ])
 
