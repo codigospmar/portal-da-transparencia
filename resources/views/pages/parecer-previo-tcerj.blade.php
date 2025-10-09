@@ -6,24 +6,24 @@
     <div class="container py-5 mb-5">
         <!-- Breadcrumb -->
         @php
-            $breadcrumbs = [
-                [
-                    'route' => route('index'),
-                    'title' => __("Página Inicial"),
-                ],
-                [
-                    'currentPage' => "page",
-                    'title' => __("Parecer Prévio das contas do Governo Municipal"),
-                ],
-            ];
+        $breadcrumbs = [
+        [
+        'route' => route('index'),
+        'title' => __("Página Inicial"),
+        ],
+        [
+        'currentPage' => "page",
+        'title' => __("Parecer Prévio das contas do Governo Municipal"),
+        ],
+        ];
         @endphp
-            
+
         @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
         @include('components._titleMain', [
-            "title" => __("Parecer Prévio das contas do Governo Municipal"),
-            "summary" => __("Prestação de contas."),
+        "title" => __("Parecer Prévio das contas do Governo Municipal"),
+        "summary" => __("Prestação de contas."),
         ])
 
         <div class="container">
@@ -107,7 +107,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2018</h3>
-                            <a href="https://portal.angra.rj.gov.br/downloads/cgm/PrestacaodeContas/18-207841-2019_190-Relatorio-e-Parecer-final-2018-PrestacaodeContasdoGoverno.pdf" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/18-207841-2019_190-Relatorio-e-Parecer-final-2018-PrestacaodeContasdoGoverno.pdf" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>
@@ -119,7 +119,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2017</h3>
-                            <a href="https://portal.angra.rj.gov.br/downloads/cgm/PrestacaodeContas/17-212768-2018_228-VOTO-FINAL-PRESTACAO-CONTAS-2017.PDF" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/17-212768-2018_228-VOTO-FINAL-PRESTACAO-CONTAS-2017.PDF" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>
@@ -131,7 +131,7 @@
                     <div class="card h-100 border-0 shadow-sm year-card">
                         <div class="card-body text-center p-4">
                             <h3 class="card-title text-soft mb-3">2016</h3>
-                            <a href="https://portal.angra.rj.gov.br/downloads/cgm/PrestacaodeContas/16-206028-2017_57-VOTO-PREST-CONTAS-2016.PDF" target="_blank" class="btn btn-success">
+                            <a href="https://angra.rj.gov.br/downloads/cgm/PrestacaodeContas/16-206028-2017_57-VOTO-PREST-CONTAS-2016.PDF" target="_blank" class="btn btn-success">
                                 <i class="fas fs-4 fa-download me-2"></i> Baixar
                             </a>
                         </div>

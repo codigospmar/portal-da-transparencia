@@ -252,7 +252,7 @@
                         "title" => "Organograma",
                     ],
                     [
-                        "link" => "https://portal.angra.rj.gov.br/downloads/Nova_Lista_Telefonica.pdf",
+                        "link" => "https://angra.rj.gov.br/downloads/Nova_Lista_Telefonica.pdf",
                         "target" => "_blank",
                         "title" => "Lista Telefônica",
                     ],
@@ -300,7 +300,7 @@
                         "title" => "Relatórios de Gestão",
                     ],
                     [
-                        "link" => "https://portal.angra.rj.gov.br/downloads/SSA/REMUME-ATUALIZADA-2025.pdf",
+                        "link" => "https://angra.rj.gov.br/downloads/SSA/REMUME-ATUALIZADA-2025.pdf",
                         "target" => "_blank",
                         "title" => "Relação de Medicamentos Essenciais",
                     ],
