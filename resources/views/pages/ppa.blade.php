@@ -4,20 +4,26 @@
    <section>
        <div class="container py-5">
            <!-- Breadcrumb -->
-           <nav aria-label="breadcrumb" class="mb-4">
-               <ol class="breadcrumb">
-                   <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                   <li class="breadcrumb-item active">PPA - Plano Plurianual</li>
-               </ol>
-           </nav>
+           @php
+                $breadcrumbs = [
+                    [
+                        'route' => route('index'),
+                        'title' => __("Página Inicial"),
+                    ],
+                    [
+                        'currentPage' => "page",
+                        'title' => __("PPA - Plano Plurianual"),
+                    ],
+                ];
+            @endphp
 
-           <!-- Título Principal -->
-           <div class="row mb-5">
-               <div class="col-12 text-center">
-                   <h1 class="display-5 fw-bold text-soft">Plano Plurianual - PPA</h1>
-                   <p class="lead text-muted">Instrumento de planejamento governamental de médio prazo que estabelece diretrizes, objetivos e metas da administração pública</p>
-               </div>
-           </div>
+            @include('components._breadcrumb', $breadcrumbs)
+
+            <!-- Título Principal -->
+            @include('components._titleMain', [
+                "title" => __("Plano Plurianual - PPA"),
+                "summary" => __("Instrumento de planejamento governamental de médio prazo que estabelece diretrizes, objetivos e metas da administração pública."),
+            ])
 
            <!-- Accordion de Anos -->
            <div class="accordion" id="accordionPPA">

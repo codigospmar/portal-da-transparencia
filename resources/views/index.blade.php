@@ -188,7 +188,7 @@
                     [
                         "link" => route('pages.metas-fiscais'),
                         "target" => "_self",
-                        "title" => "Metas Fiscals",
+                        "title" => "Metas Fiscais",
                     ],
                     [
                         "link" => route('pages.leis-orcamentarias'),

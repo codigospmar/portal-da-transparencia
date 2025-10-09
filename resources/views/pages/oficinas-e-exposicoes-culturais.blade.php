@@ -6,20 +6,32 @@
 
     <div class="container py-4">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Oficinas e Exposições Culturais</li>
-            </ol>
-        </nav>
-
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'route' => route('pages.ouvidoria'),
+                    'title' => __("Ouvidoria"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Oficinas e Exposições Culturais"),
+                ],
+            ];
+        @endphp
+            
+        @include('components._breadcrumb', $breadcrumbs)
+        
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Oficinas e Exposições Culturais</h1>
-                <p class="lead">Informações sobre as oficinas culturais oferecidas e exposições em andamento</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Oficinas e Exposições Culturais"),
+            "summary" => __("Informações sobre as oficinas culturais oferecidas e exposições em andamento."),
+        ])
+        
+        @include('components._bottunsNavOuvidoria')
 
         <!-- Botões de Acesso Rápido -->
         <div class="row mb-5">

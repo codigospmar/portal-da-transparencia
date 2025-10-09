@@ -4,22 +4,28 @@
 <section>
     <div class="container my-5">
 
-       <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Beneficiários das Desonerações Tributárias</li>
-            </ol>
-        </nav>
+        <!-- Breadcrumb -->
+       @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Beneficiários das Desonerações Tributárias"),
+                ],
+            ];
+        @endphp
+
+        @include('components._breadcrumb', $breadcrumbs)
+        
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Beneficiários das Desonerações Tributárias</h1>
-                <p class="lead fs-4 text-soft">Benefícios fiscais</p>
-
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Beneficiários das Desonerações Tributárias"),
+            "summary" => __("Benefícios fiscais."),
+        ])
 
         <div class="row g-4 justify-content-center">
             <!-- Pessoa Jurídica - Imobiliário -->

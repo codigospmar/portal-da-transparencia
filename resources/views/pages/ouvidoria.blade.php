@@ -5,48 +5,33 @@
 
     <div class="container py-4">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Ouvidoria</li>
-            </ol>
-        </nav>
-
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Ouvidoria"),
+                ],
+            ];
+        @endphp
+            
+        @include('components._breadcrumb', $breadcrumbs)
+        
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Ouvidoria</h1>
-                <p class="lead text-soft">Canais de comunicação para manifestações, dúvidas e informações</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Ouvidoria"),
+            "summary" => __("Canais de comunicação para manifestações, dúvidas e informações."),
+        ])
 
-        <!-- Botões de Navegação -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="d-flex flex-wrap gap-2 justify-content-center">
-                    <a href="https://falabr.cgu.gov.br/publico/RJ/AngradosReis/Manifestacao/RegistrarManifestacao" target="_blank" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-comment-dots me-2"></i>Cadastro de Manifestação
-                    </a>
-                    <a href="{{ route('pages.ouvidoria-perguntas-frequentes') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-question-circle me-2"></i>Perguntas Frequentes
-                    </a>
-                    <a href="{{ route('pages.ouvidoria-sobre') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-info-circle me-2"></i>Sobre o Canal de Ouvidoria
-                    </a>
-                    <a href="{{ route('pages.ouvidoria-informacoes-classificadas') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-lock me-2"></i>Informações Classificadas
-                    </a>
-                    <a href="https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-chart-bar me-2"></i>Relatórios de Manifestações
-                    </a>
-                </div>
-            </div>
-        </div>
-
+        @include('components._bottunsNavOuvidoria')
+        
         <!-- Canais de Atendimento -->
         <div class="row mb-5">
             <div class="col-12">
-                <h2 class="h3 mb-4 text-soft border-bottom pb-2">Canais de Atendimentos</h2>
+                <h2 class="h3 mb-4 text-soft border-bottom pb-2">{{ __("Canais de Atendimentos") }}</h2>
             </div>
 
             <!-- Ouvidoria -->

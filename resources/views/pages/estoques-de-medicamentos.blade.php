@@ -4,21 +4,26 @@
 <main class="main py-4">
     <div class="container py-4">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Relatório de Estoques de Medicamentos - Farmácias Públicas</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Relatório de Estoques de Medicamentos - Farmácias Públicas"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5 my-2">
-            <div class="col-12 text-center">
-                <h1 class="display-6 fw-bold text-soft">Relatório de Estoques de Medicamentos das Farmácias Públicas</h1>
-                <p class="lead text-muted">Acompanhe a disponibilidade de medicamentos na rede pública municipal.</p>
-            </div>
-        </div>
-
+        @include('components._titleMain', [
+            "title" => __("Relatório de Estoques de Medicamentos das Farmácias Públicas"),
+            "summary" => __("Acompanhe a disponibilidade de medicamentos na rede pública municipal."),
+        ])
 
         <!-- Cards de Estoques -->
         <div class="row mb-5">

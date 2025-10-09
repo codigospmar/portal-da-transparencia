@@ -7,7 +7,7 @@ use App\Models\DividaAtiva\DividaAtiva;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Unidade;
-use App\Models\Endereco;
+use App\Models\Relatorios\RelatorioDeManifestacao;
 
 class PortalController extends Controller {
 
@@ -89,6 +89,15 @@ class PortalController extends Controller {
 
         return view("pages.unidades-de-saude", [
             "unidadesSaude" => $unidadesSaude,
+        ]);
+    }
+    
+    public function relatoriosDeManifestacoes(Request $request){
+        
+        $relatorioDeManifestacoes = RelatorioDeManifestacao::orderByDesc("dataDeCadastro")->get();
+        
+        return view("pages.ouvidoria-relatorio-de-manifestacoes", [
+            "relatorioDeManifestacoes" => $relatorioDeManifestacoes,
         ]);
     }
 }

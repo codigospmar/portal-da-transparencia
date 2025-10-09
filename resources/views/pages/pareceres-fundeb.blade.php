@@ -5,20 +5,26 @@
     <div class="container my-5 pb-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Pareceres FUNDEB</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Pareceres FUNDEB"),
+                ],
+            ];
+        @endphp
+            
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Pareceres FUNDEB</h1>
-                <p class="lead fs-4 text-soft">Acesse os pareceres de forma rápida e intuitiva</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Pareceres FUNDEB"),
+            "summary" => __("Acesse os pareceres de forma rápida e intuitiva."),
+        ])
 
         <!-- Cards dos Anos -->
         <div class="row g-4">

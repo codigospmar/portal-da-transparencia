@@ -5,21 +5,27 @@
 
         <div class="container">
         <!-- Breadcrumb -->
-            <nav aria-label="breadcrumb" class="mb-3">
-                <ol class="breadcrumb small">
-                    <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Dívida Ativa</li>
-                </ol>
-            </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Dívida Ativa"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
 
         <!-- Título Principal -->
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h1 class="display-5 fw-bold text-soft">Relatório de Inscritos na Dívida Ativa</h1>
-                    <p class="lead text-muted">Relação de imóveis e contribuintes inscritos na dívida ativa do município.</p>
-                </div>
-            </div>
+        @include('components._titleMain', [
+            "title" => __("Relatório de Inscritos na Dívida Ativa"),
+            "summary" => __("Relação de imóveis e contribuintes inscritos na dívida ativa do município."),
+        ])
 
 
         <!-- Filtros -->
@@ -46,14 +52,14 @@
                         <div class="table-responsive">
                             <table class="table table-bordered table-hover table-striped align-middle text-center">
                                 @include('components.tables._thead', ['thead' => [
-                                'Criado em', 
-                                'Número de inscrição', 
-                                'Número do imóvel', 
-                                'Informações', 
-                                'Parcelado', 
-                                'Protestado', 
-                                'Ajuizado', 
-                             ]])
+                                    'Criado em', 
+                                    'Número de inscrição', 
+                                    'Número do imóvel', 
+                                    'Informações', 
+                                    'Parcelado', 
+                                    'Protestado', 
+                                    'Ajuizado', 
+                                 ]])
                                 <tbody>
                                     @php $index = 0; @endphp
                                 @forelse($dividas as $divida)

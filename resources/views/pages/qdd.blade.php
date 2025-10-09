@@ -5,17 +5,29 @@
     <div class="container my-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">QDD</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("QDD"),
+                ],
+            ];
+        @endphp
+
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
+        @include('components._titleMain', [
+            "title" => __("Quadro de Detalhamentos da Despesa - QDD"),
+            "summary" => __(""),
+        ])
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Quadro de Detalhamentos da Despesa - QDD</h1>
+                <h1 class="display-5 fw-bold text-soft"></h1>
             </div>
         </div>
 

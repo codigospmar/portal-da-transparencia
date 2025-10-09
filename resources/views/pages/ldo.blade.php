@@ -4,20 +4,26 @@
 <section>
     <div class="container py-5">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">LDO - Lei de Diretrizes Orçamentárias</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("LDO - Lei de Diretrizes Orçamentárias"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Lei de Diretrizes Orçamentárias - LDO</h1>
-                <p class="lead text-muted">Estabelece as metas e prioridades para o ano financeiro subsequente, orientando a elaboração da lei orçamentária anual</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Lei de Diretrizes Orçamentárias - LDO"),
+            "summary" => __("Estabelece as metas e prioridades para o ano financeiro subsequente, orientando a elaboração da lei orçamentária anual."),
+        ])
 
         <!-- Accordion de Anos -->
         <div class="accordion" id="accordionLDO">

@@ -5,20 +5,26 @@
     <div class="container my-5">
 
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Plano de Contratação Anual</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Plano de Contratação Anual"),
+                ],
+            ];
+        @endphp
+            
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Plano de Contratação Anual</h1>
-                <p class="lead fs-4 text-soft">Planejamento e transparência nas contratações municipais</p>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Plano de Contratação Anual"),
+            "summary" => __("Planejamento e transparência nas contratações municipais."),
+        ])
 
         <!-- Conteúdo Informativo -->
         <div class="row justify-content-center mb-5">

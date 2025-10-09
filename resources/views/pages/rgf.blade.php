@@ -4,19 +4,26 @@
 <section>
     <div class="container py-5">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-4">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">RGF - Relatório de Gestão Fiscal</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("RGF - Relatório de Gestão Fiscal"),
+                ],
+            ];
+        @endphp
+
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Relatório de Gestão Fiscal - RGF</h1>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Relatório de Gestão Fiscal - RGF"),
+            "summary" => __(""),
+        ])
 
         <!-- Accordion de Anos -->
         <div class="accordion" id="accordionRGF">

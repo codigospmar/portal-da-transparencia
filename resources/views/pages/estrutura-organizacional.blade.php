@@ -5,19 +5,26 @@
 
     <div class="container py-4">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="mb-3">
-            <ol class="breadcrumb small">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Estrutura Organizacional</li>
-            </ol>
-        </nav>
+        @php
+            $breadcrumbs = [
+                [
+                    'route' => route('index'),
+                    'title' => __("Página Inicial"),
+                ],
+                [
+                    'currentPage' => "page",
+                    'title' => __("Estrutura Organizacional"),
+                ],
+            ];
+        @endphp
+        
+        @include('components._breadcrumb', $breadcrumbs)
 
         <!-- Título Principal -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Estrutura Organizacional</h1>
-            </div>
-        </div>
+        @include('components._titleMain', [
+            "title" => __("Estrutura Organizacional"),
+            "summary" => __(""),
+        ])
 
         <!-- Botões de Acesso Rápido -->
         <div class="row mb-4">
