@@ -7,16 +7,16 @@
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('index') }}">Página Inicial</a></li>
-                <li class="breadcrumb-item active">Ouvidoria</li>
+                <li class="breadcrumb-item"><a href="{{ route('index') }}">{{ _("Página Inicial") }}</a></li>
+                <li class="breadcrumb-item active">{{ _("Ouvidoria") }}</li>
             </ol>
         </nav>
 
         <!-- Título Principal -->
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold text-soft">Ouvidoria</h1>
-                <p class="lead text-soft">Canais de comunicação para manifestações, dúvidas e informações</p>
+                <h1 class="display-5 fw-bold text-soft">{{ _("Ouvidoria") }}</h1>
+                <p class="lead text-soft">{{ _("Canais de comunicação para manifestações, dúvidas e informações") }}</p>
             </div>
         </div>
 
@@ -25,19 +25,19 @@
             <div class="col-12">
                 <div class="d-flex flex-wrap gap-2 justify-content-center">
                     <a href="https://falabr.cgu.gov.br/publico/RJ/AngradosReis/Manifestacao/RegistrarManifestacao" target="_blank" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-comment-dots me-2"></i>Cadastro de Manifestação
+                        <i class="fas fa-comment-dots me-2"></i> {{ _("Cadastro de Manifestação") }}
                     </a>
                     <a href="{{ route('pages.ouvidoria-perguntas-frequentes') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-question-circle me-2"></i>Perguntas Frequentes
+                        <i class="fas fa-question-circle me-2"></i> {{ _("Perguntas Frequentes") }}
                     </a>
                     <a href="{{ route('pages.ouvidoria-sobre') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-info-circle me-2"></i>Sobre o Canal de Ouvidoria
+                        <i class="fas fa-info-circle me-2"></i> {{ _("Sobre o Canal de Ouvidoria") }}
                     </a>
                     <a href="{{ route('pages.ouvidoria-informacoes-classificadas') }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-lock me-2"></i>Informações Classificadas
+                        <i class="fas fa-lock me-2"></i> {{ _("Informações Classificadas") }}
                     </a>
                     <a href="{{ route("pages.ouvidoria-relatorio-de-manifestacoes") }}" class="btn btn-outline-success border-0 shadow p-3 rounded-4">
-                        <i class="fas fa-chart-bar me-2"></i>Relatórios de Manifestações
+                        <i class="fas fa-chart-bar me-2"></i> {{ _("Relatórios de Manifestações") }}
                     </a>
                 </div>
             </div>
