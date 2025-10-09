@@ -12,7 +12,7 @@
                 ],
                 [
                     'currentPage' => "page",
-                    'title' => __("Julgamento das contas do Executivo pelo Legislativo"),
+                    'title' => __("Julgamento das Contas do Executivo pelo Legislativo"),
                 ],
             ];
         @endphp
@@ -21,7 +21,7 @@
 
         <!-- Título Principal -->
         @include('components._titleMain', [
-            "title" => __("Julgamento das contas do Executivo pelo Legislativo"),
+            "title" => __("Julgamento das Contas do Executivo pelo Legislativo"),
             "summary" => __(""),
         ])
 

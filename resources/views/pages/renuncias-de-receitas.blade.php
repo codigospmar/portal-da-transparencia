@@ -22,7 +22,7 @@
 
         <!-- Título Principal -->
         @include('components._titleMain', [
-            "title" => __("Estimativa e compensação da renúncia de receita"),
+            "title" => __("Estimativa e Compensação da Renúncia de Receita"),
             "summary" => __("Acesse os demonstrativos anuais de forma rápida e intuitiva."),
         ])
 
