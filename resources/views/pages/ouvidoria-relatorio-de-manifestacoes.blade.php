@@ -31,7 +31,7 @@
             @include('components._bottunsNavOuvidoria')
 
             <div class="mb-4 text-center col-4 col-sm-12">
-                <a href="https://portal.angra.rj.gov.br/ouvidoria-relatorios-manifestacoes.asp?IndexSigla=transp#" target="_blank" class="fw-bold btn border-0 shadow-sm btn-outline-success">
+                <a href="https://angra.rj.gov.br/downloads/relatorio_manifestacoes.csv" target="_blank" class="fw-bold btn border-0 shadow-sm btn-outline-success">
                     <i class="fas fa-file-csv me-2"></i> {{ __("Download do relatório de manifestações (.csv)") }}
                 </a>
             </div>

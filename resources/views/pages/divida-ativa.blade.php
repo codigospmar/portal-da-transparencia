@@ -40,7 +40,7 @@
 
         <!-- Download -->
             <div class="mb-4 text-center col-4 col-sm-12">
-                <a href="https://angra.rj.gov.br/downloads/transparencia/dados-divida-consolidada.csv" target="_blank" class="fw-bold btn border-0 shadow-sm btn-outline-success">
+                <a href="https://angra.rj.gov.br/downloads/Transparencia/dados-divida-consolidada.csv" target="_blank" class="fw-bold btn border-0 shadow-sm btn-outline-success">
                     <i class="fas fa-file-csv me-2"></i> Download do relatório completo (.csv)
                 </a>
             </div>
