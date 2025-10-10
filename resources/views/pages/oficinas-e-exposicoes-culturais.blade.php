@@ -37,10 +37,10 @@
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a href="https://portal.angra.rj.gov.br/noticia.asp?IndexSigla=SCP&vid_noticia=54876" target="_blank" class="btn btn-outline-success shadow border-0">
+                    <a href="https://angra.rj.gov.br/noticias/11-01-2019/lei-de-incentivo-e-edital-de-cultura-ja-estao-em-vigor" target="_blank" class="btn btn-outline-success shadow border-0">
                         <i class="bi bi-file-text me-2"></i>Lei de Incentivo à Cultura
                     </a>
-                    <a href="https://portal.angra.rj.gov.br/secup-fundo-municipal-cultura.asp?IndexSigla=SCP" target="_blank" class="btn btn-outline-success shadow border-0">
+                    <a href="https://angra.rj.gov.br/servicos/fundo-municipal-de-cultura-2023" target="_blank" class="btn btn-outline-success shadow border-0">
                         <i class="bi bi-cash-coin me-2"></i>Fundo Municipal de Cultura
                     </a>
                 </div>

@@ -48,7 +48,7 @@
                         </div>
                         <h3 class="card-title text-dark mb-3">QDD 2025</h3>
                         <p class="text-muted mb-4">Quadro de Detalhamento da Despesa (QDD)</p>
-                        <a href="https://portal.angra.rj.gov.br/downloads/CGM/leisorcamentarias/2025/qdd-2025.pdf" target="_blank" class="btn btn-success">
+                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2025/qdd-2025.pdf" target="_blank" class="btn btn-success">
                             <i class="fas fs-4 fa-download me-2"></i> Baixar PDF
                         </a>
                     </div>

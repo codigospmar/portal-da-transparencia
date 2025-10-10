@@ -25,7 +25,7 @@
             </div>
             <div class="col text-end">
                 <i style="cursor: pointer;" data-bs-toggle="offcanvas"
-                data-bs-target="#offCanvasPrincipal" aria-controls="offCanvasPrincipal" class="text-white fs-1 fw-bold fa-solid fa-bars"></i>
+                    data-bs-target="#offCanvasPrincipal" aria-controls="offCanvasPrincipal" class="text-white fs-1 fw-bold fa-solid fa-bars"></i>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="https://portal.angra.rj.gov.br/ouvidoria.asp?IndexSigla=sgri">{{ __("Ouvidoria - Fala.BR") }}</a>
+                <a class="nav-link" href="https://transparencia.angra.rj.gov.br/ouvidoria">{{ __("Ouvidoria - Fala.BR") }}</a>
             </li>
 
             <li class="nav-item">
@@ -107,7 +107,7 @@
                         <a class="nav-link-lateral" href="https://angra.rj.gov.br/boletim-oficial">{{ __("Boletim Oficial") }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link-lateral" href="https://portal.angra.rj.gov.br/ouvidoria.asp?IndexSigla=sgri">{{ __("Ouvidoria - Fala.BR") }}</a>
+                        <a class="nav-link-lateral" href="https://transparencia.angra.rj.gov.br/ouvidoria">{{ __("Ouvidoria - Fala.BR") }}</a>
                     </li>
 
 
@@ -118,7 +118,7 @@
     </div>
 
     <div class="offcanvas m-0 offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offCanvasPrefeitura"
-         aria-labelledby="offCanvasPrefeituraLabel">
+        aria-labelledby="offCanvasPrefeituraLabel">
         <div class="offcanvas-body">
             <!-- Lista A Prefeitura -->
             <nav class="navLateral flex-column" id="menu">
@@ -166,7 +166,7 @@
                         <a class="nav-link-lateral" href="https://angra.rj.gov.br/legislacao">{{ __("Legislação") }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link-lateral" href="https://portal.angra.rj.gov.br/sad-calendario.asp?indexsigla=SAD">{{ __("Calendário Municipal") }}</a>
+                        <a class="nav-link-lateral" href="https://portaldoservidor.angra.rj.gov.br/calendario">{{ __("Calendário Municipal") }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link-lateral" href="https://angra.rj.gov.br/calendariodeeventos">{{ __("Calendário de Eventos") }}</a>
@@ -199,73 +199,73 @@
                 <h4 class="offcanvas-body-titulos">{{ __("Secretarias") }}</h4>
                 <ul id="menuSecretarias">
 
-                </div>
-
-            <!-- Subitens de Fundações e Autarquias -->
-                <div id="subAutarquias" style="display: none;">
-
-                    <div class="offcanvas-cabecalho">
-                        <div class="offcanvas-cabecalho-back">
-                            <a id="voltarAutarquias" class="btn">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </a>
-                        </div>
-                        <div class="offcanvas-cabecalho-home voltaMenuMobile">
-                            <img src="{{ asset("/images/brasao-angra-dos-reis.svg") }}" alt="Angra dos Reis">
-                        </div>
-                        <div class="offcanvas-cabecalho-close">
-                            <a class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <i class="fa-solid fa-x"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <h4 class="offcanvas-body-titulos">{{ __("Fundações e Autarquias") }}</h4>
-                    <ul id="menuFundacoesAutarquias">
-
-                    </div>
-                </div>
             </div>
 
-            <div class="offcanvas m-0 offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offCanvasServicos" aria-labelledby="offCanvasServicosLabel">
-                <div class="offcanvas-body">
+            <!-- Subitens de Fundações e Autarquias -->
+            <div id="subAutarquias" style="display: none;">
+
+                <div class="offcanvas-cabecalho">
+                    <div class="offcanvas-cabecalho-back">
+                        <a id="voltarAutarquias" class="btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </a>
+                    </div>
+                    <div class="offcanvas-cabecalho-home voltaMenuMobile">
+                        <img src="{{ asset("/images/brasao-angra-dos-reis.svg") }}" alt="Angra dos Reis">
+                    </div>
+                    <div class="offcanvas-cabecalho-close">
+                        <a class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <h4 class="offcanvas-body-titulos">{{ __("Fundações e Autarquias") }}</h4>
+                <ul id="menuFundacoesAutarquias">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas m-0 offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offCanvasServicos" aria-labelledby="offCanvasServicosLabel">
+        <div class="offcanvas-body">
             <!-- Lista de Serviços -->
-                    <nav class="navLateral flex-column" id="menu">
+            <nav class="navLateral flex-column" id="menu">
 
-                        <div class="offcanvas-cabecalho">
-                            <div class="offcanvas-cabecalho-back voltaMenuMobile">
-                                <a data-bs-toggle="offcanvas" data-bs-target="#offCanvasPrincipal" aria-controls="offCanvasPrincipal" class="btn">
-                                    <i class="fa-solid fa-chevron-left"></i>
-                                </a>
-                            </div>
-                            <div class="offcanvas-cabecalho-home">
-                                <img src="{{ asset("/images/brasao-angra-dos-reis.svg") }}" alt="Angra dos Reis">
-                            </div>
-                            <div class="offcanvas-cabecalho-close">
-                                <a class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-                                    <i class="fa-solid fa-x"></i>
-                                </a>
-                            </div>
-                        </div>
+                <div class="offcanvas-cabecalho">
+                    <div class="offcanvas-cabecalho-back voltaMenuMobile">
+                        <a data-bs-toggle="offcanvas" data-bs-target="#offCanvasPrincipal" aria-controls="offCanvasPrincipal" class="btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </a>
+                    </div>
+                    <div class="offcanvas-cabecalho-home">
+                        <img src="{{ asset("/images/brasao-angra-dos-reis.svg") }}" alt="Angra dos Reis">
+                    </div>
+                    <div class="offcanvas-cabecalho-close">
+                        <a class="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-x"></i>
+                        </a>
+                    </div>
+                </div>
 
-                        <h4 class="offcanvas-body-titulos">{{ __("Serviços") }}</h4>
-                        <ul>
+                <h4 class="offcanvas-body-titulos">{{ __("Serviços") }}</h4>
+                <ul>
 
 
-                            <li class="nav-item">
-                                <a class="nav-link-lateral" href="https://cartadeservicos.angra.rj.gov.br" target="_blank">{{ __("Carta de Serviços") }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-lateral" href="https://portal.angra.rj.gov.br/ouvidoria.asp?indexsigla=transp">{{ __("Ouvidoria - Fala.BR") }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link-lateral" href="https://portal.angra.rj.gov.br/sad-consulta-processo.asp?IndexSigla=SAD">{{ __("Consulta de Processos") }}</a>
-                            </li>
-                            <li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link-lateral" href="https://cartadeservicos.angra.rj.gov.br" target="_blank">{{ __("Carta de Serviços") }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-lateral" href="https://transparencia.angra.rj.gov.br/ouvidoria">{{ __("Ouvidoria - Fala.BR") }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-lateral" href="https://portal.angra.rj.gov.br/sad-consulta-processo.asp?IndexSigla=SAD">{{ __("Consulta de Processos") }}</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link-lateral" href="https://angra.rj.gov.br/sei"">{{ __("Portal SEI Angra") }}</a>
                     </li>
                     <li class=" nav-item">
-                        <a class="nav-link-lateral" href="https://www.spe.angra.rj.gov.br/senhaweb/login.aspx" target="_blank">{{ __("Nota Fiscal Eletrônica") }}</a>
+                            <a class="nav-link-lateral" href="https://www.spe.angra.rj.gov.br/senhaweb/login.aspx" target="_blank">{{ __("Nota Fiscal Eletrônica") }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link-lateral" href="https://siarm.angra.rj.gov.br/" target="_blank">{{ __("Portal do Contribuinte") }}</a>
@@ -293,7 +293,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-lateral" href="https://portal.angra.rj.gov.br/lgpd.asp?IndexSigla=transp">{{ __("Proteção de Dados - LGPD") }}</a>
+                        <a class="nav-link-lateral" href="https://transparencia.angra.rj.gov.br/lgpd">{{ __("Proteção de Dados - LGPD") }}</a>
                     </li>
                 </ul>
             </nav>
@@ -309,7 +309,7 @@
                         <div class="my-3">
                             <form>
                                 <div class="input-group mb-3">
-                                <input type="search" class="form-control form-control-lg" name="search" placeholder="{{ __("Buscar Notícia") }}">
+                                    <input type="search" class="form-control form-control-lg" name="search" placeholder="{{ __("Buscar Notícia") }}">
                                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">{{ __("Pesquisar") }}</button>
                                 </div>
                             </form>
@@ -319,7 +319,7 @@
                         <div class="my-3">
                             <form>
                                 <div class="input-group mb-3">
-                                <input type="search" class="form-control form-control-lg" name="search" placeholder="{{ __("Buscar Boletim") }}">
+                                    <input type="search" class="form-control form-control-lg" name="search" placeholder="{{ __("Buscar Boletim") }}">
                                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">{{ __("Pesquisar") }}</button>
                                 </div>
                             </form>
@@ -329,7 +329,7 @@
                         <div class="my-3">
                             <form>
                                 <div class="input-group mb-3">
-                                <input type="search" class="form-control form-control-lg" name="search" placeholder="{{ __("O que procura?") }}">
+                                    <input type="search" class="form-control form-control-lg" name="search" placeholder="{{ __("O que procura?") }}">
                                     <button class="btn btn-outline-secondary" type="button" id="button-addon2">{{ __("Pesquisar") }}</button>
                                 </div>
                             </form>
@@ -351,12 +351,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body ">
-                            <div class="gcse-search"></div>
-                        </div>
-                    </div>
+                    <div class="gcse-search"></div>
                 </div>
             </div>
+        </div>
+    </div>
 
 
 
-        </section>
+</section>
