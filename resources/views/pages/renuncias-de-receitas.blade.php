@@ -60,7 +60,7 @@
                     <div class="card-body text-center p-4">
                         <h3 class="card-title text-soft mb-3">2021</h3>
 
-                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2021/3942-2020-loa/12-DEMONSTRATIVOII.pdf" target="_blank" class="btn btn-success">
+                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2021/3942-2020-LOA/12-DEMONSTRATIVOII.pdf" target="_blank" class="btn btn-success">
                             <i class="fas fs-4 fa-download me-2"></i> Baixar
                         </a>
                     </div>
@@ -86,7 +86,7 @@
                     <div class="card-body text-center p-4">
                         <h3 class="card-title text-soft mb-3">2019</h3>
 
-                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2019/3820-2018-loa/06-Demonstrativo-2.pdf" target="_blank" class="btn btn-success">
+                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2019/3820-2018-LOA/06-Demonstrativo-2.pdf" target="_blank" class="btn btn-success">
                             <i class="fas fs-4 fa-download me-2"></i> Baixar
                         </a>
                     </div>
@@ -99,7 +99,7 @@
                     <div class="card-body text-center p-4">
                         <h3 class="card-title text-soft mb-3">2018</h3>
 
-                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2018/3.723-2017-loa/demonstrativo2.pdf" target="_blank" class="btn btn-success">
+                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2018/3.723-2017-LOA/demonstrativo2.pdf" target="_blank" class="btn btn-success">
                             <i class="fas fs-4 fa-download me-2"></i> Baixar
                         </a>
                     </div>
@@ -112,7 +112,7 @@
                     <div class="card-body text-center p-4">
                         <h3 class="card-title text-soft mb-3">2017</h3>
 
-                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2017/3.615-2016-loa/ANEXOS-DA-LOA-PDF-2017/anexo14.pdf" target="_blank" class="btn btn-success">
+                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2017/3.615-2016-LOA/ANEXOS-DA-LOA-PDF-2017/anexo14.pdf" target="_blank" class="btn btn-success">
                             <i class="fas fs-4 fa-download me-2"></i> Baixar
                         </a>
                     </div>
@@ -125,7 +125,7 @@
                     <div class="card-body text-center p-4">
                         <h3 class="card-title text-soft mb-3">2016</h3>
 
-                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2016/3.457-2015-loa/anexo13.pdf" target="_blank" class="btn btn-success">
+                        <a href="https://angra.rj.gov.br/downloads/CGM/leisorcamentarias/2016/3.457-2015-LOA/anexo13.pdf" target="_blank" class="btn btn-success">
                             <i class="fas fs-4 fa-download me-2"></i> Baixar
                         </a>
                     </div>
